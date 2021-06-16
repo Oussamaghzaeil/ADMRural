@@ -1,0 +1,74 @@
+<ion-header class="header">
+  <ion-toolbar class="header">
+    <ion-buttons slot="primary">
+
+      <ion-icon style="color: aliceblue;" slot="icon-only" name="ios-undo" (click)="goBack()"></ion-icon>
+
+    </ion-buttons>
+    <ion-title>Animais Transferidos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form #form="ngForm" method="post">
+    <div *ngFor="let sa of a; let i =index ">
+      <ion-card class="card" >
+        <ion-card-header>
+          <ion-card-title>
+            <ion-grid>
+
+              <ion-row>
+                <ion-col>
+                  {{sa.TipoAnimal}}
+                </ion-col>
+                <ion-col>
+                 
+                  <ion-icon name="eye" (click)="goToo(sa.CodigoAnimal)" class="eye"></ion-icon>
+               
+                </ion-col>
+                
+              </ion-row>
+            </ion-grid>
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <div>
+
+            <ion-grid>
+              <ion-row>
+                <ion-col id="{{sa.CodigoFazenda}}">
+
+                  <ion-item class="roww" lines="none">
+                    <ion-label> Identificação do Animal :</ion-label>
+                    {{sa.IdentificacaoAnimal}}
+                  </ion-item>
+
+                  <ion-item class="roww" lines="none">
+                    <ion-label>Sexo Animal:</ion-label>
+                    {{sa.SexoAnimal}}
+                  </ion-item>
+
+                  <ion-item class="roww" lines="none">
+                    <ion-label>Raca Animal:</ion-label>
+                    {{sa.RacaAnimal}}
+                  </ion-item>
+
+
+                </ion-col>
+              </ion-row>
+             
+            </ion-grid>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+
+
+
+
+  </form>
+</ion-content>
+
+
+<!--<ion-button type="submit"  (click)="delete(sa.code)"   expand="full" class="at_but">delete</ion-button>-->

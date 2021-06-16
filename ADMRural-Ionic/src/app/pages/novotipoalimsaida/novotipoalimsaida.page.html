@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-button (click)="goBack1()">
+        <ion-icon style="color: aliceblue;" slot="icon-only" name="ios-undo"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Selectione o Tipo De Entrada-Saída</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <ion-row>
+    <ion-col >
+      <ion-searchbar showCancelButton="never" (ionInput)="FilterJSONData($event)" placeholder="Procurar..." animated></ion-searchbar>
+    </ion-col>
+  </ion-row>
+  <ion-list>
+    <div *ngFor="let sa of a">
+          <ion-button expand="full"  class="button" (click)="selected(sa.TipodeEntrada,sa.Quantidade,sa.Unidad)" style="color: black;"  > {{ sa.TipodeEntrada }} </ion-button>
+    </div>
+  </ion-list>
+</ion-content>

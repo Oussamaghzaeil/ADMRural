@@ -1,0 +1,104 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-button (click)="goBack1()">
+        <ion-icon style="color: aliceblue;" slot="icon-only" name="ios-undo"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Editar Cobertura</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <form #form="ngForm" method="post">
+    <div class="ion-text-center">
+      <ion-item class="itemm2">
+        <ion-icon style="color: white;" slot="start" name="ios-create"></ion-icon> Dados da Cobertura
+      </ion-item>
+    </div>
+    <ion-label>Data da Cobertura</ion-label>
+    <ion-datetime class="selector" placeholder="Selecione a data..." [(ngModel)]="Datadacobertura"
+      name="Datadacobertura" displayFormat="DD/MM/YYYY" #dataCtrl="ngModel" cancel-text="Cancelar" done-text="Confirma">
+    </ion-datetime>
+    <ion-label position="floating">Tipo</ion-label>
+    <ion-select class="selector" interface="popover" [(ngModel)]="Tipo" name="Tipo" value="Tipo">
+      <ion-select-option value="Touro">Touro</ion-select-option>
+      <ion-select-option value="Inciminacao">Inceminação</ion-select-option>
+    </ion-select>
+    <div>
+      <div *ngIf="Num">
+        <ion-label position="floating">Numéro </ion-label>
+        <ion-input [(ngModel)]="NumeroTouro" type="number" name="NumeroTouro"></ion-input>
+      </div>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input [(ngModel)]="NomeTouro" type="text" name="NomeTouro"></ion-input>
+      <ion-label position="floating">Raça</ion-label>
+      <ion-input [(ngModel)]="RacaTouro" type="text" name="RacaTouro"></ion-input>
+      <div *ngIf="inciminacao">
+        <ion-label position="floating">Técnico</ion-label>
+        <ion-input [(ngModel)]="TecnicoInciminacao" type="text" name="TecnicoInciminacao"></ion-input>
+      </div>
+      <div>
+        <ion-label>Animal</ion-label>
+        <ion-list *ngFor="let sa of a">
+          <ion-item>
+            <ion-label>{{ sa.IdentificacaoAnimal }} {{ sa.TipoAnimal }}</ion-label>
+          </ion-item>
+        </ion-list>
+      </div>
+      <ion-row>
+        <ion-col>
+          <ion-label position="floating">Numéro de prenhes</ion-label>
+          <ion-select class="selector" interface="popover" [(ngModel)]="PrenhesTouro" name="PrenhesTouro"
+            value="PrenhesTouro">
+            <ion-select-option value="1X">1X</ion-select-option>
+            <ion-select-option value="2X">2X</ion-select-option>
+            <ion-select-option value="3X">3X</ion-select-option>
+            <ion-select-option value="4X">4X</ion-select-option>
+            <ion-select-option value="5X">5X</ion-select-option>
+            <ion-select-option value="6X">6X</ion-select-option>
+            <ion-select-option value="7X">7X</ion-select-option>
+            <ion-select-option value="8X">8X</ion-select-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label position="floating">Medicamento/Vacina</ion-label>
+          <ion-input [(ngModel)]="MedicamentoVacinaTouro" type="text" name="MedicamentoVacinaTouro">
+          </ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label position="floating">Observação</ion-label>
+          <ion-input [(ngModel)]="observacaoTouro" type="text" name="observacaoTouro"></ion-input>
+        </ion-col>
+      </ion-row>
+      <div class="ion-text-center">
+        <ion-item class="itemm1">
+          <ion-icon style="color: white;" slot="start" name="list-box"></ion-icon> Nacimento
+        </ion-item>
+      </div>
+      <ion-label>Data da Nacimento</ion-label>
+      <ion-datetime class="selector" placeholder="Selecione a data..." [(ngModel)]="Datadanacimento"
+        name="Datadanacimento" displayFormat="DD/MM/YYYY" #dataCtrl="ngModel" cancel-text="Cancelar"
+        done-text="Confirma">
+      </ion-datetime>
+      <ion-label position="floating">Positivo/Negativo</ion-label>
+      <ion-select class="selector" interface="popover" [(ngModel)]="Situacao" name="Situacao" value="Situacao">
+        <ion-select-option value="Positivo">Positivo</ion-select-option>
+        <ion-select-option value="Negativo">Negativo</ion-select-option>
+      </ion-select>
+      <ion-label position="floating">Sexo</ion-label>
+      <ion-select class="selector" interface="popover" [(ngModel)]="Sexo" name="Sexo" value="Sexo">
+        <ion-select-option value="Macho">Macho</ion-select-option>
+        <ion-select-option value="Femea">Femea</ion-select-option>
+      </ion-select>
+      <div class="ion-text-center">
+        <ion-button type="submit" [disabled]="!form.valid" (click)="Atualizar(form);" class="at_but">Salvar
+        </ion-button>
+      </div>
+    </div>
+
+  </form>
+</ion-content>

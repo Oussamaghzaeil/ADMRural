@@ -1,0 +1,61 @@
+<ion-header class="header">
+  <ion-toolbar class="header">
+    <ion-buttons slot="primary">
+
+      <ion-icon style="color: aliceblue;" slot="icon-only" name="md-add-circle" (click)="create()" class="add">
+      </ion-icon>
+      <ion-icon style="color: aliceblue;" slot="icon-only" name="ios-undo" (click)="goBack()"></ion-icon>
+
+    </ion-buttons>
+    <ion-title>Anotações</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div *ngFor="let anotacao of anotacoes">
+    <ion-card class="card">
+      <ion-card-header>
+        <ion-card-title>
+          <ion-grid>
+
+            <ion-row>
+              <ion-col>
+                Anotação
+              </ion-col>
+              <ion-col>
+                <ion-icon name="create" (click)="edit(anotacao.Codigo)" class="build"></ion-icon>
+                <ion-icon name="ios-trash" type="submit" (click)="delete(anotacao.Codigo)" class="trash"></ion-icon>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <div>
+
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+
+                <ion-item class="roww" lines="none">
+                  <ion-label>Data:</ion-label>
+                  {{anotacao.Data}}
+                </ion-item>
+
+                <ion-item class="roww" lines="none">
+                  <ion-label>Anotação:</ion-label>
+                  {{anotacao.Anotacao}}
+                </ion-item>
+
+              </ion-col>
+            </ion-row>
+
+          </ion-grid>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+
+</ion-content>

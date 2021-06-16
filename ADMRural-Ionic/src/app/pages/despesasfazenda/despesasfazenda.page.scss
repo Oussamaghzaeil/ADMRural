@@ -1,0 +1,87 @@
+.header{
+    --ion-background-color:#009444;
+    background-color:#009444;
+}
+
+.iontitle{
+    color: rgb(253, 253, 253);  
+}
+
+ion-icon {
+    font-size: 30px; //Preferred size here
+}
+
+.titlefazenda{
+    font-weight: bold;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+#DespensaTitle{
+    font-weight: bold;
+    text-align: center;
+}
+
+.card { 
+    background:  rgba(247, 216, 123, 0.424);
+    
+}
+
+.blockdata {
+    justify-content: center;
+}
+
+.sc-ion-card-md-h {
+    --background: var(--ion-item-background,transparent);
+    --color: var(--ion-color-step-550,#737373);
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+
+.roww{
+    --background:  (241, 215, 137, 0.787);
+}
+
+//CENTER (DATA and VALOR)
+// .card-content-md {
+//     margin-left: 30px;
+// }
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.expand-arrow-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    ion-icon {
+      font-size: 44px;
+    }
+  }
+ // ICONS
+.trash{
+    position: absolute;
+    right: 0%; 
+}
+.build{
+    position: absolute;
+    right: 25%; 
+}
+.edit{
+    position: absolute;
+    right: 50%; 
+}
+
+
+.add{
+    position: absolute;
+    right: 180%; 
+}
+//END ICONS
+
+// ------------------------- 9L

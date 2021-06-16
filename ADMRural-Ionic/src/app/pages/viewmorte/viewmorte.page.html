@@ -1,0 +1,156 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-button (click)="goBack()">
+        <ion-icon style="color: aliceblue;" slot="icon-only" name="ios-undo"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Animal Morto</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <form #form="ngForm"  method="post">
+    <ion-grid>
+      <ion-row>
+        <ion-col class="ion-text-center">
+          <img src="{{imageFileBase64}}"  class="back" width="220px" height="170px">
+        </ion-col>
+        <input #inputcamera type="file" accept="image/*" capture="camera" [hidden]=true />
+      </ion-row>
+    </ion-grid>
+    <ion-input hidden [(ngModel)]="CodigoFazendaAnimal" type="text" name="CodigoFazendaAnimal"
+      value="CodigoFazendaAnimal"></ion-input>
+    <ion-grid>
+      <label class="ion-padding-top">Animal: {{TipoAnimal}} / {{IdentificacaoAnimal}}
+      </label>
+      <ion-row>
+        <ion-col>
+          <ion-label>Tipo</ion-label>
+          <div class="selectForm">
+            <ion-select disabled class="selector" interface="popover" [(ngModel)]="TipoAnimal" name="TipoAnimal"
+              value="Sexo" okText="Confirma" cancelText="Cancelar">
+              <ion-select-option *ngFor="let tipo of tipos" value="{{tipo}}">{{tipo}}</ion-select-option>
+            </ion-select>
+          </div>
+        </ion-col>
+        <ion-col>
+          <ion-label>Sexo</ion-label>
+          <div class="selectForm">
+            <ion-select disabled class="selector" interface="popover" [(ngModel)]="SexoAnimal" name="SexoAnimal"
+              value="Sexo" okText="Confirma" cancelText="Cancelar">
+              <ion-select-option selected value="Macho">Macho</ion-select-option>
+              <ion-select-option value="Femea">Fêmea</ion-select-option>
+            </ion-select>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label>Raça</ion-label>
+          <ion-input readonly [(ngModel)]="RacaAnimal" type="text" name="RacaAnimal" required>
+          </ion-input>
+        </ion-col>
+        <ion-col>
+          <ion-label>Identificação</ion-label>
+          <ion-input readonly [(ngModel)]="IdentificacaoAnimal" type="text" name="IdentificacaoAnimal"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label>Data de Nascimento</ion-label>
+          <ion-datetime readonly class="selector" placeholder="Selecione a data..." [(ngModel)]="Datadenascimento"
+            name="Datadenascimento" displayFormat="DD/MM/YYYY" #dataCtrl="ngModel" required cancel-text="Cancelar"
+            done-text="Confirma">
+          </ion-datetime>
+        </ion-col>
+        <ion-col>
+          <ion-label>Data de Aquisição</ion-label>
+          <ion-datetime readonly class="selector" placeholder="Selecione a data..." [(ngModel)]="Datadeaquisicao"
+            name="Datadeaquisicao" displayFormat="DD/MM/YYYY" #dataCtrl="ngModel" required cancel-text="Cancelar"
+            done-text="Confirma">
+          </ion-datetime>
+        </ion-col>
+      </ion-row>
+      <div>
+        <ion-row>
+          <!-- <ion-col>
+            <ion-label>Quantidade Atual</ion-label>
+            <ion-input readonly [(ngModel)]="QtdAtualAnimal" type="number" name="QtdAtualAnimal" value="Qtd_atual">
+            </ion-input>
+          </ion-col> -->
+          <ion-col>
+            <ion-label>Valor</ion-label>
+            <ion-input readonly [(ngModel)]="ValorAtualAnimal" type="text" name="ValorAtualAnimal"
+              value="Valor_atual">
+            </ion-input>
+          </ion-col>
+          <ion-col>
+            <ion-label>Peso</ion-label>
+            <ion-input readonly [(ngModel)]="PesoAtualAnimal" type="text" name="PesoAtualAnimal" value="Peso_atual">
+            </ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-label>Unidade</ion-label>
+            <ion-select disabled class="selector" interface="popover" [(ngModel)]="UnidadPesoAnimal"
+              name="UnidadPesoAnimal" value="Unidad_peso" okText="Confirma" cancelText="Cancelar">
+              <ion-select-option *ngFor="let unidad of unidades" value="{{unidad}}">{{unidad}}
+              </ion-select-option>
+            </ion-select>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-label>Observações </ion-label>
+            <ion-input readonly [(ngModel)]="ObservacoesAnimal" type="text" name="ObservacoesAnimal"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-label position="floating">Situação</ion-label>
+            <ion-select disabled class="selector" interface="popover" [(ngModel)]="Situacao" name="Situacao"
+              value="Situacao">
+              <ion-select-option value="Engorda">Engorda</ion-select-option>
+              <ion-select-option value="EngordaP">Engorda peso de venda</ion-select-option>
+              <ion-select-option value="Producao">Produção de leite</ion-select-option>
+              <ion-select-option value="Reprodutor">Reprodutor</ion-select-option>
+              <ion-select-option value="Morte">Baixa por morte</ion-select-option>
+              <ion-select-option value="Vendido">Vendido</ion-select-option>
+              <ion-select-option value="Perdido">Perdido</ion-select-option>
+            </ion-select>
+          </ion-col>
+        </ion-row>
+        <div class="ion-text-center">
+          <ion-item class="itemm">
+            <ion-icon style="color: white;" slot="start" name="list-box"></ion-icon> Outros Dados
+          </ion-item>
+        </div>
+        <ion-row>
+          <ion-col>
+            <ion-label>Data da morte</ion-label>
+            <ion-datetime readonly class="selector" placeholder="Selecione a data..." [(ngModel)]="Data" name="Data"
+              displayFormat="DD/MM/YYYY" #dataCtrl="ngModel" required cancel-text="Cancelar" done-text="Confirma">
+            </ion-datetime>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-label>Valor alimentação</ion-label>
+            <ion-input readonly [(ngModel)]="ValorAlimentacao" type="number" name="ValorAlimentacao"
+              value="ValorAlimentacao">
+            </ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-label>Valor tratamento</ion-label>
+            <ion-input readonly [(ngModel)]="ValorTratamento" type="number" name="ValorTratamento"
+              value="ValorTratamento">
+            </ion-input>
+          </ion-col>
+        </ion-row>
+      </div>
+    </ion-grid>
+  </form>
+</ion-content>

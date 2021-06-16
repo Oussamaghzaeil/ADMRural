@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ServiceAdmRural.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ServiceAdmRural_wsEmail_Servicoemail" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.undercode.com.br/ws/servicoemail.asmx</Value>
+    </Setting>
+    <Setting Name="ServiceEcupom_wsEmail_Servicoemail" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.undercode.com.br/ws/servicoemail.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

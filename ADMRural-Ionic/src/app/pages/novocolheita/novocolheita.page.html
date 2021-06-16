@@ -1,0 +1,146 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-button (click)="goBack()">
+        <ion-icon style="color: aliceblue;" slot="icon-only" name="ios-undo"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Nova Colheita</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <form #form="ngForm" (ngSubmit)="Criacao(form);" method="post">
+    <ion-row>
+      <ion-col>
+        <ion-label>Data inicio<span class="red">*</span></ion-label>
+        <ion-datetime class="selector" placeholder="Selecione a data..." [(ngModel)]="DataColheitaInicio"
+          name="DataColheitaInicio" displayFormat="DD/MM/YYYY" #dataCtrl="ngModel" required cancel-text="Cancelar"
+          done-text="Confirma">
+        </ion-datetime>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label>Data final<span class="red">*</span></ion-label>
+        <ion-datetime class="selector" placeholder="Selecione a data..." [(ngModel)]="DataColheitafinal"
+          name="DataColheitafinal" displayFormat="DD/MM/YYYY" #dataCtrl="ngModel" required cancel-text="Cancelar"
+          done-text="Confirma">
+        </ion-datetime>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">Área<span class="red">*</span></ion-label>
+        <ion-input required [(ngModel)]="Area" type="number" name="Area"></ion-input>
+      </ion-col>
+      <ion-col>
+        <ion-label position="floating">Unidade<span class="red">*</span></ion-label>
+        <ion-select class="selector" interface="popover" ngModel name="UnidadeArea" value="UnidadeArea"
+          okText="Confirma" cancelText="Cancelar" #tipoCtrl="ngModel" placeholder="(Selecione)">
+          <ion-select-option value="Metro quadrado">Metro quadrado</ion-select-option>
+          <ion-select-option value="Hectare">Hectare</ion-select-option>
+        </ion-select>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">Produto<span class="red">*</span></ion-label>
+        <ion-select class="selector" interface="popover" ngModel name="Produto" value="Produto" okText="Confirma"
+          cancelText="Cancelar" #tipoCtrl="ngModel" placeholder="(Selecione)">
+          <ion-select-option value="Kg">Kg</ion-select-option>
+          <ion-select-option value="Litros">Litros</ion-select-option>
+        </ion-select>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">Tipo</ion-label>
+        <ion-select class="selector" interface="popover" [(ngModel)]="Tipo" name="Tipo"
+          (ngModelChange)="GetTipo1(Tipo);">
+          <ion-select-option *ngFor="let Tipo of b" value="{{Tipo.Codigo}},{{Tipo.Tipo}},{{Tipo.DataFinal}}">
+            {{Tipo.Tipo}}
+          </ion-select-option>
+        </ion-select>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">Data da Plantação</ion-label>
+        <ion-datetime class="selector" [(ngModel)]="DatadaPlantacao"
+          name="DatadaPlantacao" displayFormat="DD/MM/YYYY" #dataCtrl="ngModel" required cancel-text="Cancelar"
+          done-text="Confirma">
+        </ion-datetime>
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">Horas de Maquina<span class="red">*</span></ion-label>
+        <ion-input required [(ngModel)]="HorasdeMaquina" type="number" name="HorasdeMaquina"></ion-input>
+      </ion-col>
+      <ion-col>
+        <ion-label position="floating">Valor<span class="red">*</span></ion-label>
+        <input required style="width: 180px; height: 40px;" class="input" type="number" name="ValorMaquina"
+          [(ngModel)]="ValorMaquina" (blur)="calculateRowTotal()" />
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">Mão de obra<span class="red">*</span></ion-label>
+        <!-- <input required style="width: 370px; height: 40px;" class="input" type="number" name="MaodeObra"
+          [(ngModel)]="MaodeObra" (blur)="calculateRowTotal()" /> -->
+
+          <ion-input class="ion-input" type="text" maxlength="10" [(ngModel)]="MaodeObra" name="MaodeObra"
+        (keypress)="numberOnlyValidation($event, 3)" (ionChange)="MaodeObra = format(MaodeObra)" (blur)="calculateRowTotal()"
+         autofocus></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">Outros Custos<span class="red">*</span></ion-label>
+        <!-- <input required style="width: 370px; height: 40px;" class="input" type="number" name="OutrosCustos"
+          [(ngModel)]="OutrosCustos" (blur)="calculateRowTotal()" /> -->
+
+          <ion-input class="ion-input" type="text" maxlength="10" [(ngModel)]="OutrosCustos" name="OutrosCustos"
+        (keypress)="numberOnlyValidation($event, 3)" (ionChange)="OutrosCustos = format(OutrosCustos)" (blur)="calculateRowTotal()"
+         autofocus></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">Valor Total<span class="red">*</span></ion-label>
+        <!-- <ion-input required (ionChange)="notify()" [(ngModel)]="ValorTotal" type="number" name="ValorTotal"></ion-input> -->
+
+        <ion-input class="ion-input" type="text" maxlength="10" [(ngModel)]="ValorTotal" name="ValorTotal"
+        (keypress)="numberOnlyValidation($event, 3)" (ionChange)="ValorTotal = format(ValorTotal)" 
+         autofocus required ></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">Observações<span class="red">*</span></ion-label>
+        <ion-input ngModel type="text" name="Observacoes"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">Situação<span class="red">*</span></ion-label>
+        <ion-select class="selector" interface="popover" placeholder="(Selecione)" ngModel name="Situacao" value="Situacao">
+          <ion-select-option value="Andamento">Em Andamento</ion-select-option>
+          <ion-select-option value="Finalizado">Finalizado</ion-select-option>
+        </ion-select>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">Finalidade<span class="red">*</span></ion-label>
+        <ion-input ngModel type="text" name="Finalidade"></ion-input>
+      </ion-col>
+    </ion-row>
+    <div class="ion-text-center">
+      <ion-button type="submit" [disabled]="!form.valid" class="at_but">Salvar</ion-button>
+    </div>
+  </form>
+</ion-content>

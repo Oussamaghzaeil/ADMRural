@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-button (click)="goBack1()">
+        <ion-icon style="color: aliceblue;" slot="icon-only" name="ios-undo"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Coletivo Alimentação</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <form #form="ngForm" method="post">
+    <div class="ion-text-center">
+      <ion-button class="butalim" (click)="onChangeSituacao($event)">
+
+        animais
+        <ion-icon name="md-arrow-dropup" *ngIf="selected"></ion-icon>
+        <ion-icon name="md-arrow-dropdown" *ngIf="!selected"></ion-icon>
+        <ion-icon slot="start" name="list-box"></ion-icon>
+      </ion-button>
+    </div>
+    <div *ngIf="selected">
+      <ion-list *ngFor="let sa of a">
+        <ion-item>
+          <ion-label>{{ sa.IdentificacaoAnimal }} {{ sa.TipoAnimal }}</ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+    <div class="ion-text-center">
+      <ion-item class="itemm2">
+        <ion-icon style="color: white;" slot="start" name="ios-create"></ion-icon> dados da Alimentação
+      </ion-item>
+    </div>
+    <ion-label>Data de alimentação inicial</ion-label>
+    <ion-datetime class="selector" placeholder="Selecione a data..." [(ngModel)]="Datadealimentacaoinicial"
+      name="Datadealimentacaoinicial" displayFormat="DD/MM/YYYY" #dataCtrl="ngModel" required cancel-text="Cancelar"
+      done-text="Confirma">
+    </ion-datetime>
+    <ion-label>Data de alimentação final</ion-label>
+    <ion-datetime class="selector" placeholder="Selecione a data..." [(ngModel)]="Datadealimentacaofinal"
+      name="Datadealimentacaofinal" displayFormat="DD/MM/YYYY" #dataCtrl="ngModel" required cancel-text="Cancelar"
+      done-text="Confirma">
+    </ion-datetime>
+    <ion-label position="floating">Tipo da ração</ion-label>
+    <ion-input required readonly [(ngModel)]="racao" type="text" name="racao">
+    </ion-input>
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">Quantidade </ion-label>
+        <ion-input required readonly [(ngModel)]="Quantidade" type="number" name="Quantidade">
+        </ion-input>
+      </ion-col>
+      <ion-col>
+        <ion-label position="floating">Unidade</ion-label>
+        <ion-input required readonly [(ngModel)]="Unidadementrada" type="text" name="Unidadementrada"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-label position="floating">Observação</ion-label>
+    <ion-input required [(ngModel)]="observacao" type="text" name="observacao"></ion-input>
+  </form>
+</ion-content>

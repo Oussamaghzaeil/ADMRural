@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-button (click)="goBack()">
+        <ion-icon style="color: aliceblue;" slot="icon-only" name="ios-undo"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Fale Conosco</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <form #form="ngForm" (ngSubmit)="save(form);" method="post">
+    <ion-grid>
+      <ion-row >
+        <ion-col  class="ion-text-center">
+          <img src="\assets\imgs\faleconosco.png" class="img">
+        </ion-col>  
+      </ion-row>
+     
+    </ion-grid>
+    <div>
+      <ion-label  class= "faleaqui" position="floating">Fale aqui conosco</ion-label>
+    </div>
+    <ion-textarea  style="border:solid 1px" [(ngModel)]='faleConosco.Comentario' type="text"
+      name="Comentario" clearOnEdit="true"></ion-textarea>
+    <div class="ion-text-center">
+      <ion-button type="submit" [disabled]="!form.valid" class="at_but">Enviar</ion-button>
+    </div>
+
+  </form>
+
+</ion-content>

@@ -1,0 +1,65 @@
+<ion-header class="header">
+  <ion-toolbar class="header">
+    <ion-buttons slot="primary">
+      <ion-icon *ngIf="perfil=='A'" style="color: aliceblue;" slot="icon-only" name="md-add-circle" (click)="goTo()"
+        class="add">
+      </ion-icon>
+      <ion-icon style="color: aliceblue;" slot="icon-only" name="ios-undo" (click)="goBack()"></ion-icon>
+    </ion-buttons>
+    <ion-title>Fazendas</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form #form="ngForm" method="post">
+    <div *ngFor="let sa of items; let i =index ">
+      <ion-card class="card">
+        <ion-card-header>
+          <ion-card-title>
+            <ion-grid>
+              <ion-row>
+                <ion-col class="ion-text-center">
+                  <img src={{sa.ImgFazenda}} width="500" height="120" class="img">
+                </ion-col>
+                <input #inputcamera type="file" accept="image/*" capture="camera" [hidden]=true />
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  {{sa.NomeFazenda}}
+                </ion-col>
+                <ion-col>
+                  <ion-icon *ngIf="perfil=='A'" name="create" (click)="goToo(sa.CodigoFazenda)" class="build">
+                  </ion-icon>
+                  <ion-icon *ngIf="perfil=='A'" name="ios-trash" type="submit" (click)="cancelar(sa.CodigoFazenda)"
+                    class="trash">
+                  </ion-icon>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <div>
+            <ion-grid>
+              <ion-row>
+                <ion-col id="{{sa.CodigoFazenda}}">
+                  <ion-item class="roww" lines="none">
+                    <ion-label>Observações :</ion-label>
+                    {{sa.ObservacoesFazenda}}
+                  </ion-item>
+                  <ion-item class="roww" lines="none">
+                    <ion-label>UF:</ion-label>
+                    {{sa.UfFazenda}}
+                  </ion-item>
+                  <ion-item class="roww" lines="none">
+                    <ion-label>Endereço:</ion-label>
+                    {{sa.EnderecoFazenda}}
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </form>
+</ion-content>

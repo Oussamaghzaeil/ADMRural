@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-button (click)="goBack()">
+        <ion-icon style="color: aliceblue;" slot="icon-only" name="ios-undo"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title> Anotações</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form #form="ngForm" (ngSubmit)="save(form)" method="post">
+    <ion-row>
+      <ion-col>
+        <ion-label>Data de anotação</ion-label>
+        <ion-datetime class="selector" placeholder="Selecione a Data..." [(ngModel)]="anotacao.Data" name="Data"
+          displayFormat="DD/MM/YYYY" required cancel-text="Cancelar" done-text="Confirma">
+        </ion-datetime>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label>Nome:</ion-label>
+        <ion-textarea class="selector" placeholder="Escreva sua anotação..." [(ngModel)]="anotacao.Anotacao" type="text"
+          name="Anotacao" rows="5" required>
+        </ion-textarea>
+      </ion-col>
+    </ion-row>
+    <div class="ion-text-center">
+      <ion-button type="submit" [disabled]="!form.valid" class="at_but">Salvar</ion-button>
+    </div>
+
+  </form>
+
+</ion-content>

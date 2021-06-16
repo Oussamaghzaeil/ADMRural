@@ -1,0 +1,86 @@
+<ion-header class="header">
+  <ion-toolbar class="header">
+    <ion-buttons slot="primary">
+
+      <ion-icon style="color: aliceblue;" slot="icon-only" name="md-add-circle" (click)="goTo()" class="add"></ion-icon>
+      <ion-icon style="color: aliceblue;" slot="icon-only" name="ios-undo" (click)="goBack()"></ion-icon>
+
+    </ion-buttons>
+    <ion-title>Andamento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col>
+      <ion-button disabled  class="at_but">Em Andamento</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button (click)="goToFinalizado();" class="at_but">Finalizado</ion-button>
+    </ion-col>
+  </ion-row>
+
+  <form #form="ngForm" method="post">
+    <div *ngFor="let sa of a; let i =index ">
+      <ion-card class="card">
+        <ion-card-header>
+          <ion-card-title>
+            <ion-grid>
+
+              <ion-row>
+                <ion-col>
+                     {{sa.TipodeEntrada}}
+                </ion-col>
+                <ion-col>
+                  <ion-icon name="create" (click)="goToEdit(sa.id)" class="build"></ion-icon>
+                  <ion-icon name="ios-trash" type="submit" (click)="cancelar(sa.id)" class="trash"></ion-icon>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <div>
+
+            <ion-grid>
+              <ion-row>
+                <ion-col id="{{sa.CodigoFazenda}}">
+
+                  <ion-item class="roww" lines="none">
+                    <ion-label>Data da Entrada :</ion-label>
+                    {{sa.DatadeEntrada}}
+                  </ion-item>
+
+                  <ion-item class="roww" lines="none">
+                    <ion-label>Hora da Entrada:</ion-label>
+                    {{sa.HoradeEntrada}}
+                  </ion-item>
+
+                  <ion-item class="roww" lines="none">
+                    <ion-label>Quantidade:</ion-label>
+                    {{sa.Quantidade}} {{sa.Unidad}}
+                  </ion-item>
+
+                  <ion-item class="roww" lines="none">
+                    <ion-label>Valor Total:</ion-label>
+                    {{sa.ValorTotal}} R$
+                  </ion-item>
+
+
+                </ion-col>
+              </ion-row>
+
+            </ion-grid>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+
+
+
+
+  </form>
+</ion-content>
+
+
+<!--<ion-button type="submit"  (click)="delete(sa.code)"   expand="full" class="at_but">delete</ion-button>-->

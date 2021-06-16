@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-button (click)="goBack()">
+        <ion-icon style="color: aliceblue;" slot="icon-only" name="ios-undo"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Medicação</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <form #form="ngForm"  method="post">
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">Medicação</ion-label>
+        <ion-input required [(ngModel)]="Medicacao" type="text" name="Medicacao" readonly></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label>Inicio de aplicação</ion-label>
+        <ion-input required [(ngModel)]="Datainicio" type="text" name="Datainicio" readonly></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">Qtd. doses</ion-label>
+        <ion-input required [(ngModel)]="doses" min="1" type="number" name="doses" readonly></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">Repitir (a cada x dias)</ion-label>
+        <ion-input required [(ngModel)]="repitir" type="number" name="repitir" readonly></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label>Fim da aplicação</ion-label>
+        <ion-input required readonly [(ngModel)]="Datafim" type="text" name="Datafim"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">Carência</ion-label>
+        <ion-input required [(ngModel)]="carencia" type="number" name="carencia" readonly></ion-input>
+      </ion-col>
+    </ion-row>
+    <div class="ion-text-center">
+      <ion-button type="submit" (click)="cancelar()" class="at_but">Excluir</ion-button>
+    </div>
+  </form>
+</ion-content>

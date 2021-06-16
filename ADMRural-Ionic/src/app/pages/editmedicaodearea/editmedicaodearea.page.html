@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-button (click)="Map()">
+        <ion-icon style="color: aliceblue; font-size: xx-large;" slot="icon-only" name="md-map"></ion-icon>
+      </ion-button>
+      <ion-button (click)="goBack()">
+        <ion-icon style="color: aliceblue;" slot="icon-only" name="ios-undo"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Editar Medição de área</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <form #form="ngForm" (ngSubmit)="Atualizar(form);" method="post">
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">Tipo da medição<span class="red">*</span></ion-label>
+        <ion-input class="selector" type="text" required [(ngModel)]="Tipomedicao" name="Tipomedicao"
+          value="Tipomedicao" placeholder="Adicione um tipo de medição"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">Observações<span class="red">*</span></ion-label>
+        <ion-textarea class="selector" required [(ngModel)]="Observacoes" name="Observacoes"
+          value="Observacoes" placeholder="Adicione alguma observação relevante sobre a medição"></ion-textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">Qtd.coordenadas<span class="red">*</span></ion-label>
+        <ion-input class="selector" type="number"  [(ngModel)]="Coordenadas" name="Coordenadas"
+          value="Coordenadas" ></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">Situação<span class="red">*</span></ion-label>
+        <ion-select required [(ngModel)]="Situacao" class="selector" interface="popover" name="Situacao" value="Situacao">
+          <ion-select-option value="Andamento">Em Andamento</ion-select-option>
+          <ion-select-option value="Finalizado">Finalizado</ion-select-option>
+        </ion-select>
+      </ion-col>
+    </ion-row>
+       <div class="ion-text-center">
+      <ion-button (click)="getCoordinates()" class="at_but">Incluir Ponto Medição</ion-button>
+    </div>
+
+    <div class="ion-text-center">
+      <ion-button type="submit"  class="at_but">Atualizar</ion-button>
+    </div>
+  </form>
+</ion-content>

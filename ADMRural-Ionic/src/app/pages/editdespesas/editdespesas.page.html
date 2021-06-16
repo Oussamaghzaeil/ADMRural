@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-button (click)="goBack()">
+        <ion-icon style="color: aliceblue;" slot="icon-only" name="ios-undo"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Editar Despesa</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <form #form="ngForm" (ngSubmit)="Atualizar(form);" method="post">
+    <ion-grid hidden>
+      <ion-row>
+        <ion-col class="ion-text-center">
+          <h1>Dados Da Despesa</h1>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">Fazenda</ion-label>
+        <ion-input readonly type="text" [(ngModel)]="NomeFazenda" name="NomeFazenda"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">Classe da despesa<span class="red">*</span></ion-label>
+        <ion-input [(ngModel)]="NomeClasseDespesa" type="text" placeholder="Selecione a classe de despesa..."
+          name="NomeClasseDespesa" (click)="goInsertClasse()"></ion-input>
+      </ion-col>
+      <ion-col hidden>
+        <ion-label position="floating">Nome classe da despesa<span class="red">*</span></ion-label>
+        <ion-input [(ngModel)]="CodigoClasseDespesa" type="text" placeholder="Selecione a classe de despesa..."
+          name="CodigoClasseDespesa" (click)="goInsertClasse()"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">Tipo da despesa<span class="red">*</span></ion-label>
+        <ion-select class="selector" interface="popover" [(ngModel)]="CodigoTipoDespesa" name="CodigoTipoDespesa">
+          <ion-select-option value="1">Apropriada</ion-select-option>
+          <ion-select-option value="2">Não Apropriada</ion-select-option>
+        </ion-select>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label>Data da despesa<span class="red">*</span></ion-label>
+        <ion-datetime class="selector" placeholder="Selecione a data..." [(ngModel)]="DataDespesa" name="DataDespesa"
+          displayFormat="DD/MM/YYYY" required cancel-text="Cancelar" done-text="Confirma">
+        </ion-datetime>
+      </ion-col>
+      <ion-col>
+        <ion-label>Hora da despesa</ion-label>
+        <ion-datetime class="selector" placeholder="selecione hora..." [(ngModel)]="HoraDespesa" name="HoraDespesa"
+          display-format="HH:mm:ss" picker-format="HH:mm"  cancel-text="Cancelar" done-text="Confirma">
+        </ion-datetime>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">Valor<span class="red">*</span></ion-label>
+        <ion-input [(ngModel)]="ValorDespesa" name="ValorDespesa" type="number">R$</ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">Observações </ion-label>
+        <ion-input [(ngModel)]="Observacao" name="Observacao" type="text"></ion-input>
+      </ion-col>
+    </ion-row>
+    <div class="ion-text-center">
+      <ion-button type="submit" [disabled]="!form.valid" class="at_but">Atualizar</ion-button>
+    </div>
+  </form>
+</ion-content>

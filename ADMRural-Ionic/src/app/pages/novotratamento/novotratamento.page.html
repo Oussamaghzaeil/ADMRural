@@ -1,0 +1,115 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-button (click)="goBack()">
+        <ion-icon style="color: aliceblue;" slot="icon-only" name="ios-undo"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Novo Tratamento</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <form #form="ngForm" (ngSubmit)="Criacao(form);" method="post">
+    <ion-row>
+      <ion-col>
+        <ion-label>Data inicio<span class="red">*</span></ion-label>
+        <ion-datetime class="selector" placeholder="Selecione a data..." [(ngModel)]="DataTratamento"
+          name="DataTratamento" displayFormat="DD/MM/YYYY" #dataCtrl="ngModel" required cancel-text="Cancelar"
+          done-text="Confirma">
+        </ion-datetime>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label>Data final<span class="red">*</span></ion-label>
+        <ion-datetime class="selector" placeholder="Selecione a data..." [(ngModel)]="DataTratamentofinal"
+          name="DataTratamentofinal" displayFormat="DD/MM/YYYY" #dataCtrl="ngModel" required cancel-text="Cancelar"
+          done-text="Confirma">
+        </ion-datetime>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-label position="floating">Tipo da operação<span class="red">*</span></ion-label>
+          <ion-select class="selector" required ngModel interface="popover" [(ngModel)]="tipotratamento"
+            name="tipotratamento" placeholder="Selecione o Tratamento...">
+            <ion-select-option *ngFor="let os of tratamentos">{{os.Tratamento}}</ion-select-option>
+          </ion-select>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">Tipo de tratamento<span class="red">*</span></ion-label>
+        <ion-textarea class="selector" required [(ngModel)]="MedicamentoTratamento" name="MedicamentoTratamento"
+          value="MedicamentoTratamento" placeholder="Digite o medicamento e as instruções"></ion-textarea>
+      </ion-col>
+    </ion-row>
+    <div class="ion-text-center">
+      <ion-button class="butmed" (click)="goToCreateMedicamento()">
+        Incluir Medicamentos
+        <ion-icon slot="start" name="md-medkit"></ion-icon>
+      </ion-button>
+    </div>
+
+    <div *ngFor="let sa of dados">
+      <ion-card class="card" (click)="goToViewMedicamento(sa.Codigo)">
+        <ion-card-content>
+          <div>
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                  <ion-item class="roww" lines="none">
+                    {{ sa.Medicacao }}
+                    <ion-icon name="eye" class="eye"></ion-icon>
+                  </ion-item>
+                  <ion-item class="roww" lines="none">
+                    <ion-label>Período:</ion-label>
+                    {{ sa.Datainicio }}---{{ sa.Datafim }}
+                  </ion-item>
+                  <ion-item class="roww" lines="none">
+                    <ion-label>Doses:</ion-label>
+                    {{ sa.doses }}----
+                    <ion-label>Repitir:</ion-label>
+                    {{ sa.repitir }}
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+    <div class="ion-text-center">
+      <ion-item class="itemmm">
+        <ion-icon style="color: white;" slot="start" name="list-box"></ion-icon> Acompanhamento Aplicação
+      </ion-item>
+    </div>
+    <div *ngFor="let sa of dadosaplicacao">
+      <ion-card class="card">
+        <ion-card-content>
+          <div>
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                  <ion-item class="roww" lines="none">
+                    <ion-label>Data Aplicação:</ion-label>
+                    {{ sa.Data }}
+                  </ion-item>
+                  <ion-item class="roww" lines="none">
+                    <ion-label>Situacao:</ion-label>
+                    {{ sa.Situacao }}
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+    <div class="ion-text-center">
+      <ion-button type="submit" [disabled]="!form.valid" class="at_but">Salvar</ion-button>
+    </div>
+  </form>
+</ion-content>

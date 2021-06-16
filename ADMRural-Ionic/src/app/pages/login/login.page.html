@@ -1,0 +1,47 @@
+<ion-content>
+  <div>
+    <ion-grid>
+      <ion-row text-center class="ion-justify-content-center">
+        <ion-col size-sm="10" size-md="8" size-lg="6" size-xl="4">
+          <div class="logo">
+            <h3 class="title" text-center>ADM Rural</h3>
+            <img src="/assets/imgs/logoAdmRural.png" width="100px" height="100px">
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div>
+            <h2 class="title" text-center></h2>
+          </div>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  </div>
+  <ion-row class="ion-justify-content-center">
+    <ion-col size-sm="9" size-md="7" size-lg="5" size-xl="3">
+      <div class="lower-part">
+        <div class="ion-padding-horizontal external-container">
+          <form #form="ngForm" (ngSubmit)="AuthLogin(form)" method="post">
+            <h4 style="color:#009444;">Email</h4>
+            <ion-input ngModel type="email" name="email" required></ion-input>
+            <h4 style="color:#009444;">Senha</h4>
+            <ion-input ngModel type="password" name="senha" required></ion-input>
+            <p text-right>
+              <a [routerLink]="['/recuperasenha']" [state]="{param: 123}">
+                Esqueceu a senha?
+              </a>
+            </p>
+            <ion-button class="login-btn" [disabled]="!form.valid" type="submit" expand="block">Entrar</ion-button>
+          </form>
+          <ion-button class="sign-up-btn" expand="block" fill="outline" [routerLink]="['/register']">Criar Conta
+          </ion-button>
+
+          <div class="ion-text-center">
+            <ion-label> Versão 1.04 B</ion-label>
+          </div>
+        </div>
+      </div>
+    </ion-col>
+  </ion-row>

@@ -1,0 +1,70 @@
+<ion-header class="header">
+  <ion-toolbar class="header">
+    <ion-buttons slot="primary">
+      <ion-icon style="color: aliceblue;" slot="icon-only" name="ios-undo" (click)="goBack()"></ion-icon>
+    </ion-buttons>
+    <ion-title>Animais</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="ion-text-center">
+    <div class="ion-text-center">
+      <ion-item class="itemm">
+        <ion-icon style="color: white;" slot="start" name="list-box"></ion-icon> Escolha um animal
+      </ion-item>
+    </div>
+  </div>
+  <form #form="ngForm" method="post">
+    <ion-row>
+      <ion-col>
+        <ion-select class="selector" interface="popover" [(ngModel)]="animal" name="animal"
+          (ngModelChange)="GetTipo1(animal);" (ionChange)="onChangeSituacao(animal)">
+          <ion-select-option *ngFor="let animal of a"
+            value="{{animal.CodigoAnimal}},{{animal.IdentificacaoAnimal}},{{animal.TipoAnimal}},{{animal.SexoAnimal}},{{animal.RacaAnimal}}">
+            {{animal.IdentificacaoAnimal}}
+          </ion-select-option>
+        </ion-select>
+      </ion-col>
+    </ion-row>
+    <div *ngIf="selected">
+      <ion-card class="card">
+        <ion-card-header>
+          <ion-card-title>
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                  <ion-input [(ngModel)]="TipoAnimal" name="TipoAnimal"></ion-input>
+                </ion-col>
+                <ion-col>
+                  <ion-icon name="create" (click)="goToo(id)" class="build"></ion-icon>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <div>
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                  <ion-item class="roww" lines="none">
+                    <ion-label> Identificação do Animal :</ion-label>
+                    <ion-input [(ngModel)]="identificao" name="identificao"></ion-input>
+                  </ion-item>
+                  <ion-item class="roww" lines="none">
+                    <ion-label>Sexo Animal:</ion-label>
+                    <ion-input [(ngModel)]="SexoAnimal" name="SexoAnimal"></ion-input>
+                  </ion-item>
+                  <ion-item class="roww" lines="none">
+                    <ion-label>Raca Animal:</ion-label>
+                    <ion-input [(ngModel)]="RacaAnimal" name="RacaAnimal"></ion-input>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </form>
+</ion-content>

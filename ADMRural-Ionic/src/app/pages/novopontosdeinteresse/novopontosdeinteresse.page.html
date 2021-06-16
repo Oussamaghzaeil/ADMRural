@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-button (click)="Map()">
+        <ion-icon style="color: aliceblue; font-size: xx-large;" slot="icon-only" name="md-map"></ion-icon>
+      </ion-button>
+      <ion-button (click)="goBack()">
+        <ion-icon style="color: aliceblue;" slot="icon-only" name="ios-undo"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Novo Ponto de Interesse</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <form #form="ngForm" (ngSubmit)="Criacao(form);" method="post">
+    <ion-grid>
+      <ion-row>
+        <ion-col class="ion-text-center">
+          <img src="{{imageFileBase64}}" (click)="seleccionarImagen()" class="back" width="120px" height="80px">
+        </ion-col>
+        <input #inputcamera type="file" accept="image/*" capture="camera" [hidden]=true />
+      </ion-row>
+    </ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">Latitude</ion-label>
+        <ion-input [(ngModel)]="Latitude" type="number" name="Latitude"></ion-input>
+      </ion-col>
+      <ion-col>
+        <ion-label position="floating">Longitude</ion-label>
+        <ion-input [(ngModel)]="Longitude" type="number" name="Longitude"></ion-input>
+      </ion-col>
+      <ion-col (click)="getCoordinates()" class="ion-padding-top" size="2">
+        <ion-icon class="ion-padding-top" size="large" name="md-locate"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+
+        <ion-label position="floating">Fazenda<span class="red">*</span></ion-label>
+        <ion-select class="selector" interface="popover" [(ngModel)]="CodigoFazenda" name="CodigoFazenda">
+          <ion-select-option *ngFor="let fazenda of fazendas" value="{{fazenda.CodigoFazenda}}">
+            {{fazenda.NomeFazenda}}
+          </ion-select-option>
+        </ion-select>
+
+      </ion-col>
+    </ion-row>
+   
+    <ion-list>
+      <ion-label position="floating">UF:</ion-label>
+      <ion-select class="selector" [(ngModel)]="UF" name="UF" interface="popover" placeholder="Selecione o UF..."
+        value="{{ UF  }}" (ionChange)="getCidadeCodigo(form)">
+        <ion-select-option *ngFor="let uf of ufs">{{uf.Sigla}}</ion-select-option>
+      </ion-select>
+    </ion-list>
+    <ion-list>
+      <ion-label position="floating">Município:</ion-label>
+      <ion-select [(ngModel)]="NCidade" class="selector" name="NCidade" interface="popover"
+        placeholder="Selecione o Nome da Cidade..." value="{{ NCidade  }}">
+        <ion-select-option *ngFor="let os of cidades">{{os.Nome}}</ion-select-option>
+      </ion-select>
+    </ion-list>
+    <ion-label position="floating">Endereço</ion-label>
+    <ion-textarea class="selector" [(ngModel)]="Endereco" type="text" name="Endereco_form"></ion-textarea>
+    <ion-label position="floating">Tipo de Mapeamento </ion-label>
+    <ion-input [(ngModel)]="Mapeamento" type="text" name="Mapeamento">
+    </ion-input>
+    <ion-label position="floating">Observações </ion-label>
+    <ion-input [(ngModel)]="Observacoes" type="text" name="Observacoes">
+    </ion-input>
+    <div class="ion-text-center">
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" [disabled]="!form.valid" class="at_but">Salvar</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="Cancelar();" class="at_but">Cancelar</ion-button>
+        </ion-col>
+      </ion-row>
+    </div>
+  </form>
+</ion-content>
+

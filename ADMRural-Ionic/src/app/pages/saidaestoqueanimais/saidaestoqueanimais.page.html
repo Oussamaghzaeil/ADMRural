@@ -1,0 +1,50 @@
+<ion-header class="header">
+  <ion-toolbar class="header">
+    <ion-buttons slot="primary">
+      <ion-button (click)="goBack()">
+        <ion-icon style="color: aliceblue;" slot="icon-only" name="ios-undo"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Estoque Saída Animais</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+ 
+
+  <div class="ion-text-center">
+    <ion-button (click)="goToTransf(CodigoFazenda)" class="but2">
+      TRANSFERIDOS
+      <ion-icon slot="start" name="md-swap" class="icon"></ion-icon>
+    </ion-button>
+  </div>
+
+  <div class="ion-text-center">
+    <ion-button (click)="goToMorte(CodigoFazenda)" class="but3">
+      BAIXA POR MORTE
+      <ion-icon slot="start" name="close-circle" class="icon"></ion-icon>
+    </ion-button>
+  </div>
+
+  <div class="ion-text-center">
+    <ion-button (click)="goToPerdidos(CodigoFazenda)" class="but4">
+      PERDIDOS
+      <ion-icon slot="start" name="search" class="icon"></ion-icon>
+    </ion-button>
+  </div>
+
+  <div class="ion-text-center">
+    <ion-button (click)="goToVendido(CodigoFazenda)" class="but5">
+      VENDIDOS
+      <ion-icon slot="start" name="ios-pricetags" class="icon"></ion-icon>
+    </ion-button>
+  </div>
+
+
+
+</ion-content>
+
+
+<!--<ion-button type="submit"  (click)="delete(sa.code)"   expand="full" class="at_but">delete</ion-button>-->

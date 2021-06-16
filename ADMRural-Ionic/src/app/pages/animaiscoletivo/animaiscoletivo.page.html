@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-button (click)="goBack1()">
+        <ion-icon style="color: aliceblue;" slot="icon-only" name="ios-undo"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Novo Coletivo Alimentação</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <form #form="ngForm" (ngSubmit)="CriacaoNovo(form);" method="post">
+    <div class="ion-text-center">
+      <ion-item class="itemm1">
+        <ion-icon style="color: white;" slot="start" name="list-box"></ion-icon> Escolha animais
+      </ion-item>
+    </div>
+    <ion-select cancelText='Cancelar' okText='Confirmar' multiple="true" [(ngModel)]="animal" name="animal"
+     (ionChange)="selected($event)" class="selector1">
+      <ion-select-option *ngFor="let sa of a" value="{{sa.CodigoAnimal}}">
+        {{ sa.IdentificacaoAnimal }} {{ sa.TipoAnimal }}
+      </ion-select-option>
+    </ion-select>
+    <div class="ion-text-center">
+      <ion-item class="itemm2">
+        <ion-icon style="color: white;" slot="start" name="ios-create"></ion-icon> dados da Alimentação
+      </ion-item>
+    </div>
+    <ion-row>
+      <ion-col>
+        <ion-label>Data inicio<span class="red">*</span></ion-label>
+        <ion-datetime class="selector" placeholder="Selecione a data..." [(ngModel)]="Datadealimentacaoinicial"
+          name="Datadealimentacaoinicial" displayFormat="DD/MM/YYYY" #dataCtrl="ngModel" required cancel-text="Cancelar"
+          done-text="Confirma">
+        </ion-datetime>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label>Data final<span class="red">*</span></ion-label>
+        <ion-datetime class="selector" placeholder="Selecione a data..." [(ngModel)]="Datadealimentacaofinal"
+          name="Datadealimentacaofinal" displayFormat="DD/MM/YYYY" #dataCtrl="ngModel" required cancel-text="Cancelar"
+          done-text="Confirma">
+        </ion-datetime>
+      </ion-col>
+    </ion-row>
+    <ion-label position="floating">Tipo da ração</ion-label>
+    <ion-select class="selector" interface="popover" [(ngModel)]="racao" name="racao"
+      (ngModelChange)="GetTipo1(racao);">
+      <ion-select-option *ngFor="let racao of b"
+        value="{{racao.ValorUnitario}},{{racao.Quantidade}},{{racao.Unidad}},{{racao.id}},{{racao.TipodeEntrada}}">
+        {{racao.TipodeEntrada}}
+      </ion-select-option>
+    </ion-select>
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">Qtd Em Estoque</ion-label>
+        <ion-input required readonly [(ngModel)]="QuantidadeemEntrada" type="number" name="QuantidadeemEntrada">
+        </ion-input>
+      </ion-col>
+      <ion-col>
+        <ion-label position="floating">Unidade</ion-label>
+        <ion-input required readonly [(ngModel)]="Unidadementrada" type="text" name="Unidadementrada"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">Quantidade </ion-label>
+        <input style="width: 155px;" class="input" type="number" name="Quantidade" [(ngModel)]="Quantidade"
+          (blur)="calculateRowTotal()" />
+      </ion-col>
+      <ion-col>
+        <ion-label position="floating">Valor</ion-label>
+        <ion-input (ionChange)="notify()" [(ngModel)]="valorTotal" type="number" name="valorTotal"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-label position="floating">Observação</ion-label>
+    <ion-input required [(ngModel)]="observacao" type="text" name="observacao"></ion-input>
+    <div class="ion-text-center">
+      <ion-button type="submit" [disabled]="!form.valid" class="at_but">Salvar</ion-button>
+    </div>
+  </form>
+</ion-content>

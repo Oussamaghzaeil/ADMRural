@@ -1,0 +1,66 @@
+<ion-header class="header">
+  <ion-toolbar class="header">
+    <ion-buttons slot="primary">
+      <ion-icon style="color: aliceblue;" slot="icon-only" name="md-add-circle" (click)="goTo()" class="add"></ion-icon>
+      <ion-icon style="color: aliceblue;" slot="icon-only" name="ios-undo" (click)="goBack()"></ion-icon>
+    </ion-buttons>
+    <ion-title>Finalizado</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-row>
+    <ion-col>
+      <ion-button (click)="goToAndamento();" class="at_but">Em Andamento</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button disabled class="at_but">Finalizado</ion-button>
+    </ion-col>
+  </ion-row>
+  <form #form="ngForm" method="post">
+    <div *ngFor="let sa of a; let i =index ">
+      <ion-card class="card">
+        <ion-card-header>
+          <ion-card-title>
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                  {{sa.Tipo}}
+                </ion-col>
+                <ion-col>
+                  <ion-icon name="eye" (click)="goToView(sa.Codigo)" class="build"></ion-icon>
+                  <ion-icon name="ios-trash" type="submit" (click)="cancelar(sa.Codigo)" class="trash"></ion-icon>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <div>
+            <ion-grid>
+              <ion-row>
+                <ion-col id="{{sa.CodigoFazenda}}">
+                  <ion-item class="roww" lines="none">
+                    <ion-label>Data inicio :</ion-label>
+                    {{sa.DataInicio}}
+                  </ion-item>
+                  <ion-item class="roww" lines="none">
+                    <ion-label>Data final:</ion-label>
+                    {{sa.DataFinal}}
+                  </ion-item>
+                  <ion-item class="roww" lines="none">
+                    <ion-label>Área plantada:</ion-label>
+                    {{sa.Area}} {{sa.UnidadeArea}}
+                  </ion-item>
+                  <ion-item class="roww" lines="none">
+                    <ion-label>Valor Total:</ion-label>
+                    {{sa.ValorTotal}} R$
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </form>
+</ion-content>

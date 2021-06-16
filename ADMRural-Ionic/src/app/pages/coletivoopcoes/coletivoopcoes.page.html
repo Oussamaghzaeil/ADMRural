@@ -1,0 +1,44 @@
+<ion-header class="header">
+  <ion-toolbar class="header">
+    <ion-buttons slot="primary">
+      <ion-icon style="color: aliceblue;" slot="icon-only" name="ios-undo" (click)="goBack()"></ion-icon>
+    </ion-buttons>
+    <ion-title>Tipo Coletivo</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="ion-text-center">
+    <ion-row>
+      <ion-col style="text-align: center">
+        <ion-button (click)="goToAlim();" class="at_but">
+          <img [src]="alim" class="img">
+          <h4> Alimentação</h4>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col style="text-align: center">
+        <ion-button (click)="goToTratamento();" class="at_but">
+          <img [src]="tra" class="img">
+          <h4>Tratamento</h4>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col style="text-align: center">
+        <ion-button (click)="goToCobretura();" class="at_but">
+          <img [src]="gra" class="img">
+          <h4>Cobertura</h4>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col style="text-align: center">
+        <ion-button (click)="goToTransfer();" class="at_but">
+          <img [src]="trans" class="img">
+          <h4>Transferência</h4>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

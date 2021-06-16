@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-button (click)="goBack1()">
+        <ion-icon style="color: aliceblue;" slot="icon-only" name="ios-undo"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Transferência Coletivo</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <form #form="ngForm" (ngSubmit)="Transfer(form);" method="post">
+    <div class="ion-text-center">
+      <ion-item class="itemm1">
+        <ion-icon style="color: white;" slot="start" name="list-box"></ion-icon> Escolha animais
+      </ion-item>
+    </div>
+    <ion-select cancelText='Cancelar' okText='Confirmar' multiple="true" [(ngModel)]="animal" name="animal"
+      (ionChange)="selected($event)" class="selector1">
+      <ion-select-option *ngFor="let sa of a" value="{{sa.CodigoAnimal}}">
+        {{ sa.IdentificacaoAnimal }} {{ sa.TipoAnimal }}
+      </ion-select-option>
+    </ion-select>
+
+    <div class="ion-text-center">
+      <ion-item class="itemm1">
+        <ion-icon style="color: white;" slot="start" name="list-box"></ion-icon> Dados Da Movimentação
+      </ion-item>
+    </div>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-label position="floating">Selecione uma fazenda:</ion-label>
+          <ion-select class="selector" [(ngModel)]="FazendaSelected" name="FazendaSelected" interface="popover"
+            placeholder="Selecione uma fazenda..."
+            (ionChange)="onChangeFazenda(FazendaSelected)">
+            <ion-select-option *ngFor="let Fazend of NFazenda"  value="{{ Fazend.CodigoFazenda  }}">{{Fazend.NomeFazenda}}</ion-select-option>
+          </ion-select>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <div class="ion-text-center">
+      <ion-button type="submit" class="at_but">transferir</ion-button>
+    </div>
+  </form>
+</ion-content>

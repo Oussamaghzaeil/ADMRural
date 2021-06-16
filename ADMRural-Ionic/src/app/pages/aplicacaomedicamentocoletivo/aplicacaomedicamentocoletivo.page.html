@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-button (click)="goBack()">
+        <ion-icon style="color: aliceblue;" slot="icon-only" name="ios-undo"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Aplicação</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <form #form="ngForm" (ngSubmit)="atualizar(form);" method="post">
+    <ion-row>
+      <ion-col>
+        <ion-label>Data da aplicação</ion-label>
+        <ion-datetime class="selector" placeholder="Selecione a data..." [(ngModel)]="Dataaplicacao"
+          name="Dataaplicacao" displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY" #dataCtrl="ngModel" required
+          cancel-text="Cancelar" done-text="Confirma">
+        </ion-datetime>
+      </ion-col>
+    </ion-row>
+
+    <ion-label>Situação</ion-label>
+    <ion-select class="selector" interface="popover" [(ngModel)]="Situacao" name="Situacao" value="Situacao"
+      okText="Confirma" cancelText="Cancelar">
+      <ion-select-option selected value="Aguardando aplicação">Aguardando aplicação</ion-select-option>
+      <ion-select-option value="Aplicado">Aplicado</ion-select-option>
+    </ion-select>
+    <ion-row   *ngIf="selected">
+      <div class="ion-text-center">
+        <ion-button type="submit" class="at_but">Salvar</ion-button>
+      </div>
+    </ion-row>
+  </form>
+</ion-content>

@@ -1,0 +1,999 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="MandaMensagem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email_origem" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nome_origem" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email_destino" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sujeito" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mensagem" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MandaMensagemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MandaMensagemResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerificaCerca">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cerca" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerificaCercaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VerificaCercaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerificaCoordenadas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="latitude" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="longitude" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerificaCoordenadasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VerificaCoordenadasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultoDistanciaViatura">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="latitude1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="longitude1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="latitude2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="longitude2" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultoDistanciaViaturaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultoDistanciaViaturaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailFicai">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="login" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailFicaiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EmailFicaiResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailVisaDF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="relatorio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fantasia" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailVisaDFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EmailVisaDFResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailDetranCE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="relatorio" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailDetranCEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EmailDetranCEResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailDetranDF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="relatorio" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailDetranDFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EmailDetranDFResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailDERDF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="relatorio" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailDERDFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EmailDERDFResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailDetranGO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="relatorio" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailDetranGOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EmailDetranGOResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailMOP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="relatorio" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailMOPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EmailMOPResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailAmc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="relatorio" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailAmcResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EmailAmcResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailCepromat">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="relatorio" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailCepromatResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EmailCepromatResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailCasinha">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="relatorio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="body" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailCasinhaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EmailCasinhaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailStrans">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="relatorio" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailStransResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EmailStransResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailSttram">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="relatorio" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailSttramResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EmailSttramResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailMenu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="body" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailMenuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EmailMenuResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailPronto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="body" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailProntoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EmailProntoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailCbd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="body" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailCbdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EmailCbdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailSemad">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="body" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailSemadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EmailSemadResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailAnimal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="body" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailAnimalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EmailAnimalResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailMopCidadao">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="body" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmailMopCidadaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EmailMopCidadaoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="MandaMensagemSoapIn">
+    <wsdl:part name="parameters" element="tns:MandaMensagem" />
+  </wsdl:message>
+  <wsdl:message name="MandaMensagemSoapOut">
+    <wsdl:part name="parameters" element="tns:MandaMensagemResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerificaCercaSoapIn">
+    <wsdl:part name="parameters" element="tns:VerificaCerca" />
+  </wsdl:message>
+  <wsdl:message name="VerificaCercaSoapOut">
+    <wsdl:part name="parameters" element="tns:VerificaCercaResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerificaCoordenadasSoapIn">
+    <wsdl:part name="parameters" element="tns:VerificaCoordenadas" />
+  </wsdl:message>
+  <wsdl:message name="VerificaCoordenadasSoapOut">
+    <wsdl:part name="parameters" element="tns:VerificaCoordenadasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultoDistanciaViaturaSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultoDistanciaViatura" />
+  </wsdl:message>
+  <wsdl:message name="ConsultoDistanciaViaturaSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultoDistanciaViaturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="EmailFicaiSoapIn">
+    <wsdl:part name="parameters" element="tns:EmailFicai" />
+  </wsdl:message>
+  <wsdl:message name="EmailFicaiSoapOut">
+    <wsdl:part name="parameters" element="tns:EmailFicaiResponse" />
+  </wsdl:message>
+  <wsdl:message name="EmailVisaDFSoapIn">
+    <wsdl:part name="parameters" element="tns:EmailVisaDF" />
+  </wsdl:message>
+  <wsdl:message name="EmailVisaDFSoapOut">
+    <wsdl:part name="parameters" element="tns:EmailVisaDFResponse" />
+  </wsdl:message>
+  <wsdl:message name="EmailDetranCESoapIn">
+    <wsdl:part name="parameters" element="tns:EmailDetranCE" />
+  </wsdl:message>
+  <wsdl:message name="EmailDetranCESoapOut">
+    <wsdl:part name="parameters" element="tns:EmailDetranCEResponse" />
+  </wsdl:message>
+  <wsdl:message name="EmailDetranDFSoapIn">
+    <wsdl:part name="parameters" element="tns:EmailDetranDF" />
+  </wsdl:message>
+  <wsdl:message name="EmailDetranDFSoapOut">
+    <wsdl:part name="parameters" element="tns:EmailDetranDFResponse" />
+  </wsdl:message>
+  <wsdl:message name="EmailDERDFSoapIn">
+    <wsdl:part name="parameters" element="tns:EmailDERDF" />
+  </wsdl:message>
+  <wsdl:message name="EmailDERDFSoapOut">
+    <wsdl:part name="parameters" element="tns:EmailDERDFResponse" />
+  </wsdl:message>
+  <wsdl:message name="EmailDetranGOSoapIn">
+    <wsdl:part name="parameters" element="tns:EmailDetranGO" />
+  </wsdl:message>
+  <wsdl:message name="EmailDetranGOSoapOut">
+    <wsdl:part name="parameters" element="tns:EmailDetranGOResponse" />
+  </wsdl:message>
+  <wsdl:message name="EmailMOPSoapIn">
+    <wsdl:part name="parameters" element="tns:EmailMOP" />
+  </wsdl:message>
+  <wsdl:message name="EmailMOPSoapOut">
+    <wsdl:part name="parameters" element="tns:EmailMOPResponse" />
+  </wsdl:message>
+  <wsdl:message name="EmailAmcSoapIn">
+    <wsdl:part name="parameters" element="tns:EmailAmc" />
+  </wsdl:message>
+  <wsdl:message name="EmailAmcSoapOut">
+    <wsdl:part name="parameters" element="tns:EmailAmcResponse" />
+  </wsdl:message>
+  <wsdl:message name="EmailCepromatSoapIn">
+    <wsdl:part name="parameters" element="tns:EmailCepromat" />
+  </wsdl:message>
+  <wsdl:message name="EmailCepromatSoapOut">
+    <wsdl:part name="parameters" element="tns:EmailCepromatResponse" />
+  </wsdl:message>
+  <wsdl:message name="EmailCasinhaSoapIn">
+    <wsdl:part name="parameters" element="tns:EmailCasinha" />
+  </wsdl:message>
+  <wsdl:message name="EmailCasinhaSoapOut">
+    <wsdl:part name="parameters" element="tns:EmailCasinhaResponse" />
+  </wsdl:message>
+  <wsdl:message name="EmailStransSoapIn">
+    <wsdl:part name="parameters" element="tns:EmailStrans" />
+  </wsdl:message>
+  <wsdl:message name="EmailStransSoapOut">
+    <wsdl:part name="parameters" element="tns:EmailStransResponse" />
+  </wsdl:message>
+  <wsdl:message name="EmailSttramSoapIn">
+    <wsdl:part name="parameters" element="tns:EmailSttram" />
+  </wsdl:message>
+  <wsdl:message name="EmailSttramSoapOut">
+    <wsdl:part name="parameters" element="tns:EmailSttramResponse" />
+  </wsdl:message>
+  <wsdl:message name="EmailMenuSoapIn">
+    <wsdl:part name="parameters" element="tns:EmailMenu" />
+  </wsdl:message>
+  <wsdl:message name="EmailMenuSoapOut">
+    <wsdl:part name="parameters" element="tns:EmailMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="EmailProntoSoapIn">
+    <wsdl:part name="parameters" element="tns:EmailPronto" />
+  </wsdl:message>
+  <wsdl:message name="EmailProntoSoapOut">
+    <wsdl:part name="parameters" element="tns:EmailProntoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EmailCbdSoapIn">
+    <wsdl:part name="parameters" element="tns:EmailCbd" />
+  </wsdl:message>
+  <wsdl:message name="EmailCbdSoapOut">
+    <wsdl:part name="parameters" element="tns:EmailCbdResponse" />
+  </wsdl:message>
+  <wsdl:message name="EmailSemadSoapIn">
+    <wsdl:part name="parameters" element="tns:EmailSemad" />
+  </wsdl:message>
+  <wsdl:message name="EmailSemadSoapOut">
+    <wsdl:part name="parameters" element="tns:EmailSemadResponse" />
+  </wsdl:message>
+  <wsdl:message name="EmailAnimalSoapIn">
+    <wsdl:part name="parameters" element="tns:EmailAnimal" />
+  </wsdl:message>
+  <wsdl:message name="EmailAnimalSoapOut">
+    <wsdl:part name="parameters" element="tns:EmailAnimalResponse" />
+  </wsdl:message>
+  <wsdl:message name="EmailMopCidadaoSoapIn">
+    <wsdl:part name="parameters" element="tns:EmailMopCidadao" />
+  </wsdl:message>
+  <wsdl:message name="EmailMopCidadaoSoapOut">
+    <wsdl:part name="parameters" element="tns:EmailMopCidadaoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServicoemailSoap">
+    <wsdl:operation name="MandaMensagem">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MandaMensagem</wsdl:documentation>
+      <wsdl:input message="tns:MandaMensagemSoapIn" />
+      <wsdl:output message="tns:MandaMensagemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificaCerca">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">VerificaCerca</wsdl:documentation>
+      <wsdl:input message="tns:VerificaCercaSoapIn" />
+      <wsdl:output message="tns:VerificaCercaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificaCoordenadas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">VerificaCoordenadas</wsdl:documentation>
+      <wsdl:input message="tns:VerificaCoordenadasSoapIn" />
+      <wsdl:output message="tns:VerificaCoordenadasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultoDistanciaViatura">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ConsultoDistanciaViatura</wsdl:documentation>
+      <wsdl:input message="tns:ConsultoDistanciaViaturaSoapIn" />
+      <wsdl:output message="tns:ConsultoDistanciaViaturaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EmailFicai">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">EmailFicai</wsdl:documentation>
+      <wsdl:input message="tns:EmailFicaiSoapIn" />
+      <wsdl:output message="tns:EmailFicaiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EmailVisaDF">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">EmailVisaDF</wsdl:documentation>
+      <wsdl:input message="tns:EmailVisaDFSoapIn" />
+      <wsdl:output message="tns:EmailVisaDFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EmailDetranCE">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">EmailDetranCE</wsdl:documentation>
+      <wsdl:input message="tns:EmailDetranCESoapIn" />
+      <wsdl:output message="tns:EmailDetranCESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EmailDetranDF">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">EmailDetranDF</wsdl:documentation>
+      <wsdl:input message="tns:EmailDetranDFSoapIn" />
+      <wsdl:output message="tns:EmailDetranDFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EmailDERDF">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">EmailDERDF</wsdl:documentation>
+      <wsdl:input message="tns:EmailDERDFSoapIn" />
+      <wsdl:output message="tns:EmailDERDFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EmailDetranGO">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">EmailDetranGO</wsdl:documentation>
+      <wsdl:input message="tns:EmailDetranGOSoapIn" />
+      <wsdl:output message="tns:EmailDetranGOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EmailMOP">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">EmailMOP</wsdl:documentation>
+      <wsdl:input message="tns:EmailMOPSoapIn" />
+      <wsdl:output message="tns:EmailMOPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EmailAmc">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">EmailAmc</wsdl:documentation>
+      <wsdl:input message="tns:EmailAmcSoapIn" />
+      <wsdl:output message="tns:EmailAmcSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EmailCepromat">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">EmailCepromat</wsdl:documentation>
+      <wsdl:input message="tns:EmailCepromatSoapIn" />
+      <wsdl:output message="tns:EmailCepromatSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EmailCasinha">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">EmailCasinha</wsdl:documentation>
+      <wsdl:input message="tns:EmailCasinhaSoapIn" />
+      <wsdl:output message="tns:EmailCasinhaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EmailStrans">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">EmailStrans</wsdl:documentation>
+      <wsdl:input message="tns:EmailStransSoapIn" />
+      <wsdl:output message="tns:EmailStransSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EmailSttram">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">EmailSttram</wsdl:documentation>
+      <wsdl:input message="tns:EmailSttramSoapIn" />
+      <wsdl:output message="tns:EmailSttramSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EmailMenu">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">EmailMenu</wsdl:documentation>
+      <wsdl:input message="tns:EmailMenuSoapIn" />
+      <wsdl:output message="tns:EmailMenuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EmailPronto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">EmailPronto</wsdl:documentation>
+      <wsdl:input message="tns:EmailProntoSoapIn" />
+      <wsdl:output message="tns:EmailProntoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EmailCbd">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">EmailCbd</wsdl:documentation>
+      <wsdl:input message="tns:EmailCbdSoapIn" />
+      <wsdl:output message="tns:EmailCbdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EmailSemad">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">EmailSemad</wsdl:documentation>
+      <wsdl:input message="tns:EmailSemadSoapIn" />
+      <wsdl:output message="tns:EmailSemadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EmailAnimal">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">EmailAnimal</wsdl:documentation>
+      <wsdl:input message="tns:EmailAnimalSoapIn" />
+      <wsdl:output message="tns:EmailAnimalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EmailMopCidadao">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">EmailMopCidadao</wsdl:documentation>
+      <wsdl:input message="tns:EmailMopCidadaoSoapIn" />
+      <wsdl:output message="tns:EmailMopCidadaoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServicoemailSoap" type="tns:ServicoemailSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="MandaMensagem">
+      <soap:operation soapAction="http://tempuri.org/MandaMensagem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificaCerca">
+      <soap:operation soapAction="http://tempuri.org/VerificaCerca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificaCoordenadas">
+      <soap:operation soapAction="http://tempuri.org/VerificaCoordenadas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultoDistanciaViatura">
+      <soap:operation soapAction="http://tempuri.org/ConsultoDistanciaViatura" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailFicai">
+      <soap:operation soapAction="http://tempuri.org/EmailFicai" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailVisaDF">
+      <soap:operation soapAction="http://tempuri.org/EmailVisaDF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailDetranCE">
+      <soap:operation soapAction="http://tempuri.org/EmailDetranCE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailDetranDF">
+      <soap:operation soapAction="http://tempuri.org/EmailDetranDF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailDERDF">
+      <soap:operation soapAction="http://tempuri.org/EmailDERDF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailDetranGO">
+      <soap:operation soapAction="http://tempuri.org/EmailDetranGO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailMOP">
+      <soap:operation soapAction="http://tempuri.org/EmailMOP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailAmc">
+      <soap:operation soapAction="http://tempuri.org/EmailAmc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailCepromat">
+      <soap:operation soapAction="http://tempuri.org/EmailCepromat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailCasinha">
+      <soap:operation soapAction="http://tempuri.org/EmailCasinha" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailStrans">
+      <soap:operation soapAction="http://tempuri.org/EmailStrans" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailSttram">
+      <soap:operation soapAction="http://tempuri.org/EmailSttram" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailMenu">
+      <soap:operation soapAction="http://tempuri.org/EmailMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailPronto">
+      <soap:operation soapAction="http://tempuri.org/EmailPronto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailCbd">
+      <soap:operation soapAction="http://tempuri.org/EmailCbd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailSemad">
+      <soap:operation soapAction="http://tempuri.org/EmailSemad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailAnimal">
+      <soap:operation soapAction="http://tempuri.org/EmailAnimal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailMopCidadao">
+      <soap:operation soapAction="http://tempuri.org/EmailMopCidadao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServicoemailSoap12" type="tns:ServicoemailSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="MandaMensagem">
+      <soap12:operation soapAction="http://tempuri.org/MandaMensagem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificaCerca">
+      <soap12:operation soapAction="http://tempuri.org/VerificaCerca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificaCoordenadas">
+      <soap12:operation soapAction="http://tempuri.org/VerificaCoordenadas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultoDistanciaViatura">
+      <soap12:operation soapAction="http://tempuri.org/ConsultoDistanciaViatura" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailFicai">
+      <soap12:operation soapAction="http://tempuri.org/EmailFicai" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailVisaDF">
+      <soap12:operation soapAction="http://tempuri.org/EmailVisaDF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailDetranCE">
+      <soap12:operation soapAction="http://tempuri.org/EmailDetranCE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailDetranDF">
+      <soap12:operation soapAction="http://tempuri.org/EmailDetranDF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailDERDF">
+      <soap12:operation soapAction="http://tempuri.org/EmailDERDF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailDetranGO">
+      <soap12:operation soapAction="http://tempuri.org/EmailDetranGO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailMOP">
+      <soap12:operation soapAction="http://tempuri.org/EmailMOP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailAmc">
+      <soap12:operation soapAction="http://tempuri.org/EmailAmc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailCepromat">
+      <soap12:operation soapAction="http://tempuri.org/EmailCepromat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailCasinha">
+      <soap12:operation soapAction="http://tempuri.org/EmailCasinha" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailStrans">
+      <soap12:operation soapAction="http://tempuri.org/EmailStrans" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailSttram">
+      <soap12:operation soapAction="http://tempuri.org/EmailSttram" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailMenu">
+      <soap12:operation soapAction="http://tempuri.org/EmailMenu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailPronto">
+      <soap12:operation soapAction="http://tempuri.org/EmailPronto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailCbd">
+      <soap12:operation soapAction="http://tempuri.org/EmailCbd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailSemad">
+      <soap12:operation soapAction="http://tempuri.org/EmailSemad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailAnimal">
+      <soap12:operation soapAction="http://tempuri.org/EmailAnimal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailMopCidadao">
+      <soap12:operation soapAction="http://tempuri.org/EmailMopCidadao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Servicoemail">
+    <wsdl:port name="ServicoemailSoap" binding="tns:ServicoemailSoap">
+      <soap:address location="http://www.undercode.com.br/ws/servicoemail.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServicoemailSoap12" binding="tns:ServicoemailSoap12">
+      <soap12:address location="http://www.undercode.com.br/ws/servicoemail.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

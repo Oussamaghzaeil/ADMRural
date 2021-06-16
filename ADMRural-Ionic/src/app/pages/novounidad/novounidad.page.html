@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="primary">
+        <ion-button (click)="goBack()">
+          <ion-icon style="color: aliceblue;" slot="icon-only" name="ios-undo"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title>Criar Novo Unidad</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content padding class="content">
+    <form #form="ngForm" (ngSubmit)="Criacao(form);" method="post">
+      <ion-row>
+        <ion-col>
+  
+          <ion-label position="floating">Novo Unidad</ion-label>
+          <ion-input ngModel type="text" name="NovoUnidad" placeholder="insira novo unidad"></ion-input>
+  
+  
+        </ion-col>
+      </ion-row>
+  
+  
+      <div class="ion-text-center">
+        <ion-button type="submit" [disabled]="!form.valid" class="at_but">Salvar</ion-button>
+      </div>
+  
+    </form>
+  
+  
+  
+  </ion-content>

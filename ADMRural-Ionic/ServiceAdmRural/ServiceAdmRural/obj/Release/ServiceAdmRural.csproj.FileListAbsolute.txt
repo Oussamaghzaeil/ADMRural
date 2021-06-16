@@ -1,0 +1,200 @@
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\ApplicationInsights.config
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\roslyn\csc.exe
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\roslyn\Microsoft.CodeAnalysis.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\roslyn\Microsoft.CSharp.Core.targets
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\roslyn\Microsoft.VisualBasic.Core.targets
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\roslyn\System.Collections.Immutable.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\roslyn\System.Reflection.Metadata.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\roslyn\vbc.exe
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\roslyn\VBCSCompiler.exe
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\roslyn\VBCSCompiler.exe.config
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\ServiceAdmRural.dll.config
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\ServiceAdmRural.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\ServiceAdmRural.XmlSerializers.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\ServiceAdmRural.pdb
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\ServiceAdmRural.dll.CodeAnalysisLog.xml
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\ServiceAdmRural.dll.lastcodeanalysissucceeded
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.Agent.Intercept.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.DependencyCollector.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.PerfCounterCollector.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.ServerTelemetryChannel.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.Web.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.WindowsServer.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.ApplicationInsights.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\Newtonsoft.Json.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\System.Net.Http.Formatting.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\System.Web.Cors.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\System.Web.Http.Cors.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\System.Web.Http.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\System.Web.Http.WebHost.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.DependencyCollector.xml
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.ServerTelemetryChannel.xml
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.Web.xml
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.WindowsServer.xml
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.ApplicationInsights.xml
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\System.Net.Http.Formatting.xml
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\System.Web.Http.xml
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\System.Web.Http.Cors.xml
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\Newtonsoft.Json.xml
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\bin\System.Web.Http.WebHost.xml
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\obj\Release\ServiceAdmRural.csprojAssemblyReference.cache
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\obj\Release\ServiceAdmRural.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\obj\Release\ServiceAdmRural.csproj.CopyComplete
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\obj\Release\ServiceAdmRural.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\obj\Release\ServiceAdmRural.pdb
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceAdmRural\ServiceAdmRural\obj\Release\ServiceAdmRural.XmlSerializers.dll
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\ApplicationInsights.config
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\roslyn\csc.exe
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\roslyn\System.Collections.Immutable.dll
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\roslyn\System.Reflection.Metadata.dll
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\roslyn\vbc.exe
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\roslyn\VBCSCompiler.exe
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\roslyn\VBCSCompiler.exe.config
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\ServiceAdmRural.dll.config
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\ServiceAdmRural.dll
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\ServiceAdmRural.XmlSerializers.dll
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\ServiceAdmRural.pdb
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\ServiceAdmRural.dll.CodeAnalysisLog.xml
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\ServiceAdmRural.dll.lastcodeanalysissucceeded
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.DependencyCollector.dll
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.Web.dll
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.WindowsServer.dll
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.ApplicationInsights.dll
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\Newtonsoft.Json.dll
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\System.Net.Http.Formatting.dll
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\System.Web.Cors.dll
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\System.Web.Http.Cors.dll
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\System.Web.Http.dll
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\System.Web.Http.WebHost.dll
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.DependencyCollector.xml
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.Web.xml
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.WindowsServer.xml
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.ApplicationInsights.xml
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\System.Net.Http.Formatting.xml
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\System.Web.Http.xml
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\System.Web.Http.Cors.xml
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\Newtonsoft.Json.xml
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\bin\System.Web.Http.WebHost.xml
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\obj\Release\ServiceAdmRural.csprojAssemblyReference.cache
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\obj\Release\ServiceAdmRural.csproj.CoreCompileInputs.cache
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\obj\Release\ServiceAdmRural.csproj.CopyComplete
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\obj\Release\ServiceAdmRural.dll
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\obj\Release\ServiceAdmRural.pdb
+C:\Level33\Projetos\AdmRural\ServiceAdmRural\ServiceAdmRural\obj\Release\ServiceAdmRural.XmlSerializers.dll
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\ApplicationInsights.config
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\roslyn\csc.exe
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\roslyn\System.Collections.Immutable.dll
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\roslyn\System.Reflection.Metadata.dll
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\roslyn\vbc.exe
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\roslyn\VBCSCompiler.exe
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\roslyn\VBCSCompiler.exe.config
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\ServiceAdmRural.dll.config
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\ServiceAdmRural.dll
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\ServiceAdmRural.XmlSerializers.dll
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\ServiceAdmRural.pdb
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\ServiceAdmRural.dll.CodeAnalysisLog.xml
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\ServiceAdmRural.dll.lastcodeanalysissucceeded
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.DependencyCollector.dll
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.Web.dll
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.WindowsServer.dll
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.ApplicationInsights.dll
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\Newtonsoft.Json.dll
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\System.Net.Http.Formatting.dll
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\System.Web.Cors.dll
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\System.Web.Http.Cors.dll
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\System.Web.Http.dll
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\System.Web.Http.WebHost.dll
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.DependencyCollector.xml
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.Web.xml
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.WindowsServer.xml
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.ApplicationInsights.xml
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\System.Net.Http.Formatting.xml
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\System.Web.Http.xml
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\System.Web.Http.Cors.xml
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\Newtonsoft.Json.xml
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\bin\System.Web.Http.WebHost.xml
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\obj\Release\ServiceAdmRural.csprojAssemblyReference.cache
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\obj\Release\ServiceAdmRural.csproj.CoreCompileInputs.cache
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\obj\Release\ServiceAdmRural.csproj.CopyComplete
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\obj\Release\ServiceAdmRural.dll
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\obj\Release\ServiceAdmRural.pdb
+C:\Level33\Projetos\ADM-Rural\ServiceAdmRural\ServiceAdmRural\obj\Release\ServiceAdmRural.XmlSerializers.dll
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\ApplicationInsights.config
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\roslyn\csc.exe
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\roslyn\vbc.exe
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\roslyn\VBCSCompiler.exe
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\ServiceAdmRural.dll.config
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\ServiceAdmRural.dll
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\ServiceAdmRural.XmlSerializers.dll
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\ServiceAdmRural.pdb
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\ServiceAdmRural.dll.CodeAnalysisLog.xml
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\ServiceAdmRural.dll.lastcodeanalysissucceeded
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.Web.dll
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\Newtonsoft.Json.dll
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\System.Net.Http.Formatting.dll
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\System.Web.Cors.dll
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\System.Web.Http.Cors.dll
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\System.Web.Http.dll
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\System.Web.Http.WebHost.dll
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.Web.xml
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\System.Net.Http.Formatting.xml
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\System.Web.Http.xml
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\System.Web.Http.Cors.xml
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\Newtonsoft.Json.xml
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\bin\System.Web.Http.WebHost.xml
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\obj\Release\ServiceAdmRural.csprojAssemblyReference.cache
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\obj\Release\ServiceAdmRural.csproj.CoreCompileInputs.cache
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\obj\Release\ServiceAdmRural.csproj.CopyComplete
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\obj\Release\ServiceAdmRural.dll
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\obj\Release\ServiceAdmRural.pdb
+C:\Users\Level\Desktop\new new\Pronto Book\ServiceAdmRural\ServiceAdmRural\obj\Release\ServiceAdmRural.XmlSerializers.dll

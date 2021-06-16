@@ -1,0 +1,115 @@
+$primary-color: #157145;
+$secondary-color: #57a773;
+$tertiary-first: #6a8eae;
+$tertiary-second: #9bd1e5;
+$tertiary-third: #d1faff;
+
+ion-content {
+
+    --background: url('../../../assets/imgs/farm.jpg') no-repeat center center / cover;
+
+}
+
+/* ion-input {
+  //font-size:1.2rem;
+  margin-top: 0.2rem;
+  margin-bottom: 1.5rem;
+  border: 0.55px solid rgba(121, 121, 121, 0.4) !important;
+  border-radius: 25px;
+  --placeholder-color: black;
+  --placeholder-opacity: 1 !important;
+  --padding-top: 0.4rem;
+  --padding-bottom: 0.4rem;
+  --padding-start: 0.6rem;
+  --opacity: 1 !important;
+  opacity: 1 !important;
+} */
+
+.login-btn {
+  --border-radius: 25px;
+  --background: #009444;
+  //--background-focused: #57a773;
+  //--background-hover: #57a773;
+  //--background-activated: #57a773;
+}
+
+.sign-up-btn {
+  --border-radius: 25px;
+  --border-color: #009444;
+  --background: transparent;
+  --color: #009444;
+  --color-focused: #009444;
+  --background-activated: #009444
+}
+
+.upper-part {
+    background-color: #57a773;
+    z-index: -1000;
+}
+
+
+.lower-part{
+    
+    margin-top: -0.1rem;
+    z-index: 10!important;
+    align-items: center;
+    align-content: center;
+    margin-left: 8.5%;
+    
+    .external-container{
+        // box-shadow: 0 4px 4px rgba(0, 0, 0, 0.12);
+        box-shadow: 0px 0.7px 2px 0px rgba(0, 0, 0, 0.5);
+        //background-color: white;
+        //background-color: transparent;
+        background-color: rgba(251, 251, 251, 0.63);
+        border-radius: 10px;
+        width: 90%;
+        padding: 1rem;
+    }
+}
+
+.logo{
+    background-color: rgba(251, 251, 251, 0.63);
+    border-radius: 10px;
+    // width: 10rem;
+    padding: 0.5rem 0px 0.1rem 0px;
+    margin: 3rem 2rem 0rem 2rem;
+}
+
+.text-logo{
+    margin-bottom: 7rem;
+    color: #DAB65E;
+}
+
+p{
+    a{
+        color: #463c3b;
+    }
+}
+
+.marginbtn{
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-family: Comic ;
+    //margin-bottom: 7rem;
+    font-size: 40px;
+    color: #009444;
+    }
+
+ion-input {
+    //font-size:1.2rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.5rem;
+    border: 0.55px solid rgba(121, 121, 121, 0.4) !important;
+    border-radius: 10px;
+    //--placeholder-color: black;
+    //--placeholder-opacity: 1 !important;
+    //--opacity: 1 !important;
+    //opacity: 1 !important;
+    --padding-top: 0.7rem;
+    --padding-bottom: 0.7rem;
+    --padding-start: 0.6rem;
+    --border-color: rgb(93, 121, 74);
+  }

@@ -1,0 +1,162 @@
+<ion-header class="header">
+  <ion-toolbar class="header">
+    <ion-buttons slot="primary">
+      <ion-icon style="color: aliceblue;" slot="icon-only" name="md-add-circle" (click)="goTo()" class="add"></ion-icon>
+      <ion-icon style="color: aliceblue;" slot="icon-only" name="ios-undo" (click)="goBack()"></ion-icon>
+    </ion-buttons>
+    <ion-title>Estoque Saída Alimentação</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <form *ngIf="ViewCard" #form="ngForm" method="post">
+    <div *ngFor="let sa of a; let i =index ">
+      <ion-card class="card">
+        <ion-card-header>
+          <ion-card-title>
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                  {{sa.TipodeSaida}}
+                </ion-col>
+                <ion-col>
+                  <ion-icon name="eye" (click)="goToView(sa)" class="build"></ion-icon>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <div>
+            <ion-grid>
+              <ion-row>
+                <ion-col id="{{sa.CodigoFazenda}}">
+
+                  <ion-item class="roww" lines="none">
+                    <ion-label>Data da Entrada :</ion-label>
+                    {{sa.DatadeSaida}}
+                  </ion-item>
+                  <ion-item class="roww" lines="none">
+                    <ion-label>Hora da Entrada:</ion-label>
+                    {{sa.HoradeSaida}}
+                  </ion-item>
+                  <ion-item class="roww" lines="none">
+                    <ion-label>Quantidade:</ion-label>
+                    {{sa.Quantidade}} {{sa.Unidad}}
+                  </ion-item>
+                  <ion-item class="roww" lines="none">
+                    <ion-label>Valor Total:</ion-label>
+                    {{sa.ValorTotal}} R$
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </form>
+
+  <div *ngIf="ViewCard == false">
+    <ion-card class = "cardStyle">
+      <ion-row  class="viewdetail" style="padding-top: 15px; font-size: 1.5rem; font-weight: 600;">
+        <ion-col>
+          <ion-label>Nome Fazenda :</ion-label>
+        </ion-col>
+        <ion-col>
+          {{NomeFazenda}}  
+        </ion-col>
+      </ion-row >
+      <br><br>
+      <ion-row class="viewdetail">
+        <ion-col>
+          <ion-label>Tipo Saída</ion-label>
+        </ion-col>
+        <ion-col>
+          {{TipodeSaida}}  
+        </ion-col>
+      </ion-row>
+      <br><br>
+      <ion-row class="viewdetail">
+        <ion-col>
+          <ion-label>Data de Saida</ion-label>
+        </ion-col>
+        <ion-col>
+          {{DatadeSaida}} 
+        </ion-col>
+      </ion-row>
+      <br><br>
+      <ion-row class="viewdetail">
+        <ion-col>
+          <ion-label>Hora de Saida</ion-label>
+        </ion-col>
+        <ion-col>
+          {{HoradeSaida}} 
+        </ion-col>
+      </ion-row>
+      <br><br>
+      <ion-row class="viewdetail">
+        <ion-col>
+          <ion-label>Quantidade</ion-label>
+        </ion-col>
+        <ion-col>
+          {{Quantidade}} 
+        </ion-col>
+      </ion-row>
+      <br><br>
+      <ion-row class="viewdetail">
+        <ion-col>
+          <ion-label>Unidade</ion-label>
+        </ion-col>
+        <ion-col>
+          {{Unidad}} 
+        </ion-col>
+      </ion-row>
+      <br><br>
+      <ion-row class="viewdetail">
+        <ion-col>
+          <ion-label>Tipo de Movimentacao</ion-label>
+        </ion-col>
+        <ion-col>
+          {{TipodeMovimentacao}} 
+        </ion-col>
+      </ion-row>
+      <br><br>
+      <ion-row class="viewdetail">
+        <ion-col>
+          <ion-label>Valor Unitario</ion-label>
+        </ion-col>
+        <ion-col>
+          {{ValorUnitario}} 
+        </ion-col>
+      </ion-row>
+      <br><br>
+      <ion-row class="viewdetail">
+        <ion-col>
+          <ion-label>Valor Total</ion-label>
+        </ion-col>
+        <ion-col>
+          {{ValorTotal}} 
+        </ion-col>
+      </ion-row>
+      <br><br>
+      <ion-row class="viewdetail">
+        <ion-col>
+          <ion-label>Observacao</ion-label>
+        </ion-col>
+        <ion-col>
+          {{Observacao}}  
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" (click)="backView()" style="margin-left: 30%;" >Volte</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </div>
+</ion-content>
+
+
+<!--<ion-button type="submit"  (click)="delete(sa.code)"   expand="full" class="at_but">delete</ion-button>-->

@@ -1,0 +1,137 @@
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\ApplicationInsights.config
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\roslyn\csc.exe
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\roslyn\System.Collections.Immutable.dll
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\roslyn\System.Reflection.Metadata.dll
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\roslyn\vbc.exe
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\roslyn\VBCSCompiler.exe
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\roslyn\VBCSCompiler.exe.config
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\ServiceEcupom.dll.config
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\ServiceEcupom.dll
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\ServiceEcupom.pdb
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\Microsoft.AI.DependencyCollector.dll
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\Microsoft.AI.Web.dll
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\Microsoft.AI.WindowsServer.dll
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\Microsoft.ApplicationInsights.dll
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\Newtonsoft.Json.dll
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\System.Net.Http.Formatting.dll
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\System.Web.Cors.dll
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\System.Web.Http.Cors.dll
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\System.Web.Http.dll
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\System.Web.Http.WebHost.dll
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\Microsoft.AI.DependencyCollector.xml
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\Microsoft.AI.Web.xml
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\Microsoft.AI.WindowsServer.xml
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\Microsoft.ApplicationInsights.xml
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\System.Net.Http.Formatting.xml
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\System.Web.Http.xml
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\System.Web.Http.Cors.xml
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\Newtonsoft.Json.xml
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\bin\System.Web.Http.WebHost.xml
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\obj\Debug\ServiceEcupom.csproj.CoreCompileInputs.cache
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\obj\Debug\ServiceEcupom.csproj.CopyComplete
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\obj\Debug\ServiceEcupom.dll
+C:\Projetos\csharp\ServiceEcupom\ServiceEcupom\obj\Debug\ServiceEcupom.pdb
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\ApplicationInsights.config
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\roslyn\csc.exe
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\roslyn\Microsoft.CodeAnalysis.dll
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\roslyn\Microsoft.CSharp.Core.targets
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\roslyn\Microsoft.VisualBasic.Core.targets
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\roslyn\System.Collections.Immutable.dll
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\roslyn\System.Reflection.Metadata.dll
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\roslyn\vbc.exe
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\roslyn\VBCSCompiler.exe
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\roslyn\VBCSCompiler.exe.config
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\ServiceEcupom.dll.config
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\ServiceEcupom.dll
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\ServiceEcupom.pdb
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\Microsoft.AI.Agent.Intercept.dll
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\Microsoft.AI.DependencyCollector.dll
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\Microsoft.AI.PerfCounterCollector.dll
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\Microsoft.AI.ServerTelemetryChannel.dll
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\Microsoft.AI.Web.dll
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\Microsoft.AI.WindowsServer.dll
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\Microsoft.ApplicationInsights.dll
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\Newtonsoft.Json.dll
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\System.Net.Http.Formatting.dll
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\System.Web.Cors.dll
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\System.Web.Http.Cors.dll
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\System.Web.Http.dll
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\System.Web.Http.WebHost.dll
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\Microsoft.AI.DependencyCollector.xml
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\Microsoft.AI.ServerTelemetryChannel.xml
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\Microsoft.AI.Web.xml
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\Microsoft.AI.WindowsServer.xml
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\Microsoft.ApplicationInsights.xml
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\System.Net.Http.Formatting.xml
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\System.Web.Http.xml
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\System.Web.Http.Cors.xml
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\Newtonsoft.Json.xml
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\bin\System.Web.Http.WebHost.xml
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\obj\Debug\ServiceEcupom.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\obj\Debug\ServiceEcupom.csproj.CopyComplete
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\obj\Debug\ServiceEcupom.dll
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\obj\Debug\ServiceEcupom.pdb
+\\Mac\Home\Desktop\level33\app.dev\ServiceEcupom\ServiceEcupom\obj\Debug\ServiceEcupom.csprojAssemblyReference.cache
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\ApplicationInsights.config
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\roslyn\csc.exe
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\roslyn\Microsoft.CodeAnalysis.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\roslyn\Microsoft.CSharp.Core.targets
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\roslyn\Microsoft.VisualBasic.Core.targets
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\roslyn\System.Collections.Immutable.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\roslyn\System.Reflection.Metadata.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\roslyn\vbc.exe
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\roslyn\VBCSCompiler.exe
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\roslyn\VBCSCompiler.exe.config
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\ServiceEcupom.dll.config
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\ServiceEcupom.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\ServiceEcupom.pdb
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\Microsoft.AI.Agent.Intercept.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\Microsoft.AI.DependencyCollector.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\Microsoft.AI.PerfCounterCollector.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\Microsoft.AI.ServerTelemetryChannel.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\Microsoft.AI.Web.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\Microsoft.AI.WindowsServer.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\Microsoft.ApplicationInsights.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\Newtonsoft.Json.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\System.Net.Http.Formatting.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\System.Web.Cors.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\System.Web.Http.Cors.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\System.Web.Http.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\System.Web.Http.WebHost.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\Microsoft.AI.DependencyCollector.xml
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\Microsoft.AI.ServerTelemetryChannel.xml
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\Microsoft.AI.Web.xml
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\Microsoft.AI.WindowsServer.xml
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\Microsoft.ApplicationInsights.xml
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\System.Net.Http.Formatting.xml
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\System.Web.Http.xml
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\System.Web.Http.Cors.xml
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\Newtonsoft.Json.xml
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\bin\System.Web.Http.WebHost.xml
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\obj\Debug\ServiceEcupom.csprojAssemblyReference.cache
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\obj\Debug\ServiceEcupom.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\obj\Debug\ServiceEcupom.csproj.CopyComplete
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\obj\Debug\ServiceEcupom.dll
+\\Mac\Home\Desktop\Projetos\C Charp\ServiceEcupom\ServiceEcupom\obj\Debug\ServiceEcupom.pdb

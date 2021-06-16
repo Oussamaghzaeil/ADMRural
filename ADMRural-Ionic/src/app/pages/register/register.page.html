@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-button (click)="goBack()">
+        <ion-icon slot="icon-only" name="ios-undo" style="color: rgb(255, 255, 255);"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Criar Conta</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <form #form="ngForm" (ngSubmit)="GravarDados(form)" method="post">
+    <ion-grid>
+      <ion-row>
+        <ion-col class="ion-text-center">
+          <ion-avatar class="ava">
+            <img src="{{imageFileBase64}}" (click)="seleccionarImagen()">
+          </ion-avatar>
+        </ion-col>
+        <input #inputcamera type="file" accept="image/*" capture="camera" [hidden]=true />
+      </ion-row>
+    </ion-grid>
+    <ion-label position="floating">Nome:</ion-label>
+    <ion-input #Nome ngModel type="text" placeholder="Informe seu nome" name="Nome" required value="{{ Nome  }} ">
+    </ion-input>
+    <ion-label position="floating">Email:</ion-label>
+    <ion-input #email ngModel type="email" name="email" pattern="[A-Za-z0-9._%+-]{2,}@[a-zA-Z-_.]{2,}[.]{1}[a-zA-Z]{2,}"
+      required value="{{ Email  }}"></ion-input>
+    <ion-label position="floating">Confirme o email:</ion-label>
+    <ion-input #email ngModel type="email" name="email" pattern="[A-Za-z0-9._%+-]{2,}@[a-zA-Z-_.]{2,}[.]{1}[a-zA-Z]{2,}"
+      required value="{{ Email  }}"></ion-input>
+    <ion-label position="floating">Telefone (dd + número):</ion-label>
+    <ion-row>
+      <ion-col size=2>
+        <ion-input class="input" (keypress)="numberOnlyValidation2($event)" type="text" [(ngModel)]="numero2"
+          name="numero2" autofocus>
+        </ion-input>
+      </ion-col>
+      <ion-col size=10>
+        <ion-input class="input" (keypress)="numberOnlyValidation8($event)" type="text" [(ngModel)]="numero8"
+          name="numero8" autofocus>
+        </ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-label position="floating">Senha:</ion-label>
+    <ion-input ngModel type="password" placeholder="Digite a Senha" name="Senha" required>
+    </ion-input>
+    <ion-label position="floating">Repita a Senha:</ion-label>
+    <ion-input ngModel type="password" placeholder="Repita a Senha" name="ReSenha" required>
+    </ion-input>
+    <div class="ion-text-center">
+      <ion-item class="itemm2">
+        Por favor, responda a uma dessas perguntas abaixo
+      </ion-item>
+    </div>
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">Qual sua equipe esportiva favorita?</ion-label>
+        <ion-input class="input" type="text" placeholder="equipe" [(ngModel)]="equipe" name="equipe"autofocus></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">Qual a sua primeira escola?</ion-label>
+        <ion-input class="input" type="text" placeholder="modelo" [(ngModel)]="modelo"name="modelo" autofocus></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">Qual a sua comida preferida?</ion-label>
+        <ion-input class="input" type="text" placeholder="cantor" [(ngModel)]="cantor"name="cantor" autofocus></ion-input>
+      </ion-col>
+    </ion-row>
+ 
+      <div class="ion-text-center">
+        <ion-button type="submit" [disabled]="!form.valid" class="sol_but">Solicitar Cadastro</ion-button>
+      </div>
+  </form>
+</ion-content>

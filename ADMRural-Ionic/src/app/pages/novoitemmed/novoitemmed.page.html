@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-button (click)="Cancelar()">
+        <ion-icon style="color: aliceblue;" slot="icon-only" name="ios-undo"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Inserir item</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <form #form="ngForm" (ngSubmit)="CriacaoNovo(form);" method="post">
+    <ion-label position="floating">Nome Fazenda</ion-label>
+    <ion-input readonly [(ngModel)]="Nome" type="text" name="Nome"></ion-input>
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">Tipo de entrada</ion-label>
+        <ion-input [(ngModel)]="TipoSelected" type="text" placeholder="Selecione o Tipo de entrada..."
+          name="TipoSelected" (click)="goInsertTipo()"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label>Data da entrada</ion-label>
+        <ion-datetime class="selector" placeholder="Selecione a data..." [(ngModel)]="Datadaentrada"
+          name="Datadaentrada" displayFormat="DD/MM/YYYY" #dataCtrl="ngModel" required cancel-text="Cancelar"
+          done-text="Confirma">
+        </ion-datetime>
+      </ion-col>
+      <ion-col>
+        <ion-label>Hora da entrada</ion-label>
+        <ion-datetime class="selector" placeholder="Selecione a hora..." [(ngModel)]="horadaentrada"
+          name="horadaentrada" displayFormat="HH:mm" pickerFormat="HH:mm" #dataCtrl="ngModel" required
+          cancel-text="Cancelar" done-text="Confirma">
+        </ion-datetime>
+      </ion-col>
+    </ion-row>
+    <ion-label position="floating">Quantidade</ion-label>
+    <ion-input [(ngModel)]="Quantidade" type="number" name="Quantidade"></ion-input>
+    <ion-row>
+      <ion-col size="6">
+        <ion-label position="floating">Valor Unitário</ion-label>
+        <input style="width: 155px;" class="input" type="text" name="valorUnitario" [(ngModel)]="valorUnitario"
+          (blur)="calculateRowTotal()" />
+      </ion-col>
+      <ion-col size="6">
+        <ion-label position="floating">Valor total</ion-label>
+        <ion-input ngModel type="number" [(ngModel)]="valorTotal" name="valorTotal"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">Observações </ion-label>
+        <ion-input ngModel type="text" name="Observacoes"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">Situação entrada</ion-label>
+        <ion-select class="selector" interface="popover" ngModel name="Situacao_estoque" value="Situacao">
+          <ion-select-option value="Andamento">Em Andamento</ion-select-option>
+          <ion-select-option value="Finalizado">Finalizado</ion-select-option>
+        </ion-select>
+      </ion-col>
+    </ion-row>
+    <div class="ion-text-center">
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" [disabled]="!form.valid" class="at_but">Salvar</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="Cancelar();" class="at_but">Cancelar</ion-button>
+        </ion-col>
+      </ion-row>
+    </div>
+  </form>
+</ion-content>

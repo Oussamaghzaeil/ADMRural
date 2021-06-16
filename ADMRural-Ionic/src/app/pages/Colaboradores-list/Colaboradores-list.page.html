@@ -1,0 +1,35 @@
+
+
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Colaboradores-list</ion-title>
+    <ion-buttons slot="end">
+      <ion-button  *ngIf="perfil=='A'" (click)="createColaborador()">
+        <ion-icon name="add"></ion-icon>
+        NOVO COLABORADOR
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <form #form="ngForm" (ngSubmit)="save(form)" method="post">
+    <ion-item *ngFor="let colaborador of colaboradores">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+         
+            <ion-label>
+              {{ colaborador.nome }}
+            </ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-button *ngIf="perfil=='A'" title="Edit" (click)="updateColaborador(colaborador.codigoColaborador)">
+        <ion-icon slot="icon-only" name="construct"></ion-icon>
+      </ion-button>
+      <ion-button *ngIf="perfil=='A'" title="Delete" (click)="willDeleteColaborador( colaborador.codigoColaborador, colaborador.nome)" color="danger">
+        <ion-icon slot="icon-only" name="trash"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </form>
+</ion-content>

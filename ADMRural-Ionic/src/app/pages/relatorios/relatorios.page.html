@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-button (click)="goBack()">
+        <ion-icon style="color: aliceblue;" slot="icon-only" name="ios-undo"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Relatórios</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form #form="ngForm" (ngSubmit)="save(form)" method="post">
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">Fazenda<span class="red">*</span></ion-label>
+        <ion-select class="selector" interface="popover" [(ngModel)]="relatorio.CodigoFazenda" name="CodigoFazenda">
+          <ion-select-option *ngFor="let fazenda of fazendas" value="{{fazenda.CodigoFazenda}}">
+            {{fazenda.NomeFazenda}}
+          </ion-select-option>
+        </ion-select>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">Tipo de relatório<span class="red">*</span></ion-label>
+        <ion-select class="selector" interface="popover" [(ngModel)]="relatorio.TipoRelatorio" name="TipoRelatorio">
+          <ion-select-option *ngFor="let tipoRelatorio of TipoRelatorios" value="{{tipoRelatorio.codigo}}">
+            {{tipoRelatorio.value}}
+          </ion-select-option>
+        </ion-select>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">Tipo de despesa<span class="red">*</span></ion-label>
+        <ion-select class="selector" interface="popover" [(ngModel)]="relatorio.TipoDespesa" name="TipoDespesa">
+          <ion-select-option *ngFor="let tipoDespesa of TipoDespesas" value="{{tipoDespesa.codigo}}">
+            {{tipoDespesa.value}}
+          </ion-select-option>
+        </ion-select>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label>Data inicial<span class="red">*</span></ion-label>
+        <ion-datetime class="selector" placeholder="Selecione a data..." [(ngModel)]="relatorio.DataInicial"
+          name="DataInicial" displayFormat="DD/MM/YYYY" required cancel-text="Cancelar" done-text="Confirma">
+        </ion-datetime>
+      </ion-col>
+      <ion-col>
+        <ion-label>Data final<span class="red">*</span></ion-label>
+        <ion-datetime class="selector" placeholder="Selecione a data..." [(ngModel)]="relatorio.DataFinal"
+          name="DataFinal" displayFormat="DD/MM/YYYY" required cancel-text="Cancelar" done-text="Confirma">
+        </ion-datetime>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label>Visualizar:</ion-label>
+        <ion-checkbox [(ngModel)]="relatorio.Visualizar" name="Visualizar" (ionChange)="checkVisualizar()">
+        </ion-checkbox>
+      </ion-col>
+      <ion-col>
+        <ion-label>Enviar por e-mail:</ion-label>
+        <ion-checkbox [(ngModel)]="relatorio.SendEmail" name="SendEmail" (ionChange)="checkSendEmail()"></ion-checkbox>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div *ngIf="relatorio.SendEmail == true">
+          <ion-label>Email:</ion-label>
+          <ion-input [(ngModel)]="relatorio.Email" type="text" name="Email">
+          </ion-input>
+        </div>
+      </ion-col>
+    </ion-row>
+    <div class="ion-text-center">
+      <ion-button type="submit" [disabled]="!form.valid" class="at_but">Confirmar</ion-button>
+    </div>
+  </form>
+</ion-content>

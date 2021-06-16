@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-button (click)="goBack()">
+        <ion-icon style="color: aliceblue;" slot="icon-only" name="ios-undo"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Tipo de Estoque</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+
+
+  <div class="ion-text-center">
+    <ion-button size="default" (click)="goToAnim()" class="but0">
+      Animais
+      <ion-icon slot="start" name="logo-octocat" class="icon"></ion-icon>
+    </ion-button>
+  </div>
+
+
+  <div class="ion-text-center">
+    <ion-button size="default" (click)="goToAlim()" class="but1">
+      Alimentação
+      <ion-icon slot="start" name="md-restaurant" class="icon"></ion-icon>
+    </ion-button>
+  </div>
+
+
+  <div class="ion-text-center">
+    <ion-button (click)="goToMed()" class="but2">
+      Medicamento
+      <ion-icon slot="start" name="md-medkit" class="icon"></ion-icon>
+    </ion-button>
+  </div>
+
+
+  <div class="ion-text-center">
+    <ion-button (click)="goToOtro()" class="but3">
+      Outros...
+      <ion-icon slot="start" name="md-medical" class="icon"></ion-icon>
+    </ion-button>
+  </div>
+
+
+</ion-content>

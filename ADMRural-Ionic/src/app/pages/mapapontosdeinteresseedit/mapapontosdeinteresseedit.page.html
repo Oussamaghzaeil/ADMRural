@@ -1,0 +1,12 @@
+<ion-header class="header">
+  <ion-toolbar class="header">
+    <ion-buttons slot="primary">
+      <ion-icon style="color: aliceblue;" slot="icon-only" name="ios-undo" (click)="goBack()"></ion-icon>
+    </ion-buttons>
+    <ion-title>Ponto de interesse</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <iframe *ngIf="mapURL" [src]="mapURL" width="100%" height="150%" scrolling="no" frameborder="0"></iframe>
+</ion-content>

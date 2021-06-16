@@ -1,0 +1,98 @@
+<ion-header class="header">
+  <ion-toolbar class="header">
+    <ion-buttons slot="primary">
+      <ion-icon style="color: aliceblue;" slot="icon-only" name="md-add-circle" (click)="goTo()" class="add"></ion-icon>
+      <ion-icon style="color: aliceblue;" slot="icon-only" name="ios-undo" (click)="goBack()"></ion-icon>
+    </ion-buttons>
+    <ion-title>Tratamentos</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form #form="ngForm" method="post">
+    <div *ngFor="let sa of b; let i =index ">
+      <ion-card class="card">
+        <ion-card-header>
+          <ion-card-title>
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                  {{sa.TipoTratamento}}
+                </ion-col>
+                <ion-col>
+                  <ion-icon name="md-radio-button-on"  class="connect"></ion-icon>
+                  <ion-icon name="create" (click)="goToo(sa.CodigoTratamento)" class="build"></ion-icon>
+                  <ion-icon name="ios-trash" type="submit" (click)="cancelar(sa.CodigoTratamento)" class="trash">
+                  </ion-icon>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <div>
+            <ion-grid>
+              <ion-row>
+                <ion-col id="{{sa.CodigoTratamento}}">
+                  <ion-item class="roww" lines="none">
+                    <ion-label>Medicamento Tratamento :</ion-label>
+                    {{sa.MedicamentoTratamento}}
+                  </ion-item>
+                  <ion-item class="roww" lines="none">
+                    <ion-label>Data inicio:</ion-label>
+                    {{sa.DataTratamento}}
+                  </ion-item>
+                  <ion-item class="roww" lines="none">
+                    <ion-label>Data final:</ion-label>
+                    {{sa.DataTratamentofinal}}
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+    <div *ngFor="let sa of a; let i =index ">
+      <ion-card class="card">
+        <ion-card-header>
+          <ion-card-title>
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                  {{sa.TipoTratamento}}
+                </ion-col>
+                <ion-col>
+                  <ion-icon name="create" (click)="goToo(sa.CodigoTratamento)" class="build"></ion-icon>
+                  <ion-icon name="ios-trash" type="submit" (click)="cancelar(sa.CodigoTratamento)" class="trash">
+                  </ion-icon>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <div>
+            <ion-grid>
+              <ion-row>
+                <ion-col id="{{sa.CodigoTratamento}}">
+                  <ion-item class="roww" lines="none">
+                    <ion-label>Medicamento Tratamento :</ion-label>
+                    {{sa.MedicamentoTratamento}}
+                  </ion-item>
+                  <ion-item class="roww" lines="none">
+                    <ion-label>Data inicio:</ion-label>
+                    {{sa.DataTratamento}}
+                  </ion-item>
+                  <ion-item class="roww" lines="none">
+                    <ion-label>Data final:</ion-label>
+                    {{sa.DataTratamentofinal}}
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </form>
+</ion-content>

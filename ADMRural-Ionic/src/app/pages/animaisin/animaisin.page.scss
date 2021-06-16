@@ -1,0 +1,130 @@
+.header {
+  --ion-background-color: #009444;
+  background-color: #009444;
+}
+ion-title {
+  color: rgb(253, 253, 253);
+}
+ion-icon {
+  font-size: 30px;
+}
+.card {
+  background: rgba(247, 216, 123, 0.424);
+}
+.sc-ion-card-md-h {
+  --background: var(--ion-item-background, transparent);
+  --color: var(--ion-color-step-550, #737373);
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+}
+.roww {
+  --background: (241, 215, 137, 0.787);
+}
+.circle {
+  background: #009444;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  position: absolute;
+  right: 5%;
+  margin-left: 300px;
+  margin-top: 90px;
+  margin-bottom: 100px;
+}
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 65%;
+  height: 50%;
+  transform: translate(-50%, -50%);
+  width: 52px;
+  height: 50px;
+  display: block;
+  background-color: #009444;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+.expand-arrow-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  ion-icon {
+    font-size: 44px;
+  }
+}
+
+.img {
+  border-radius: 35%;
+  width: 210px;
+  margin-left: 30px;
+  margin-right: 20px;
+}
+
+.build {
+  position: absolute;
+  right: 35%;
+}
+.trash {
+  position: absolute;
+  right: 0%;
+}
+.sell {
+  position: absolute;
+  right: 70%;
+}
+
+.smallicon {
+  width: 60px;
+  height: 60px;
+}
+.smalliconn {
+  width: 55px;
+  height: 55px;
+  margin-left: 15px;
+  margin-right: 3px;
+}
+
+.add {
+  position: absolute;
+  right: 180%;
+}
+
+.selector {
+  color: #000002;
+  justify-content: center;
+  border: solid 0.55px rgba(121, 121, 121, 0.4);
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+.selector1 {
+  color: #000002;
+  margin-top: 40px;
+  justify-content: center;
+  border: solid 0.55px rgba(121, 121, 121, 0.4);
+  background-color: #ffffff;
+  border-radius: 5px;
+  max-width: 100% !important;
+  max-height: 100% !important;
+}
+.but1 {
+  margin-top: 25px;
+  --background: #ddc16d;
+  --border-radius: 12px;
+  font-size: x-large;
+}
+.itemm {
+  margin-top: 25px;
+  --background: #ddc16d;
+  --border-radius: 12px;
+  font-size: x-large;
+  color: white;
+  width:90%;
+  margin-left: 5%;
+  
+}

@@ -1,0 +1,41 @@
+<ion-header class="header">
+  <ion-toolbar class="header">
+    <ion-buttons slot="primary">
+      <ion-button (click)="goBack()">
+        <ion-icon style="color: aliceblue;" slot="icon-only" name="ios-undo"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Coletivo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form #form="ngForm" method="post">
+    <div *ngFor="let sa of a; let i =index ">
+      <ion-card class="card" (click)="goToo(sa.CodigoFazenda)">
+        <ion-card-header>
+          <ion-card-title>
+            <ion-grid>
+              <ion-row>
+                <ion-col >
+                  {{sa.NomeFazenda}}
+                </ion-col>
+                <ion-col>
+                  <ion-icon name="arrow-forward" class="build"></ion-icon>
+                  <!--    <ion-icon name="ios-trash" type="submit" (click)="cancelar(sa.CodigoFazenda)" class="trash"></ion-icon> -->
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-title>
+        </ion-card-header>
+        <!-- <ion-card-content>
+        </ion-card-content> -->
+      </ion-card>
+    </div>
+    
+  </form>
+</ion-content>
+
+
+<!--<ion-button type="submit"  (click)="delete(sa.code)"   expand="full" class="at_but">delete</ion-button>-->
